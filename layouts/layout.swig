@@ -25,11 +25,9 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>
-            <li><a href="/history">History</a></li>
-            <li><a href="/event">This Year's Event</a></li>
-            <li><a href="/contacts">Contacts</a></li>
-            <li><a href="/support">Support</a></li>
+            {% for n in navigation %}
+              <li><a href="{{n.url}}">{{n.title}}</a></li>
+            {% endfor %}
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->

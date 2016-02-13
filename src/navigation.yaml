@@ -1,0 +1,15 @@
+-
+  title: "Home"
+  url: "/"
+-
+  title: "History"
+  url: "/history"
+-
+  title: "This Year's Event"
+  url: "/event"
+-
+  title: "Contacts"
+  url: "/contacts"
+-
+  title: "Support"
+  url: "/support"
