@@ -5,14 +5,26 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node index.js"
+    "clean": "rm -R build/*",
+    "build_frontend": "browserify -o ./build/build.js ./src/index.js",
+    "build_site": "node index.js",
+    "build": "npm run clean && npm run build_site && npm run build_frontend"
+  },
+  "browserify": {
+    "transform": [
+      ["node-lessify", {}]
+    ]
   },
   "author": "Colin Sullivan <colin [at] colin-sullivan.net>",
   "license": "MIT",
   "dependencies": {
+    "bootstrap": "^3.3.6",
+    "browserify": "^13.0.0",
+    "jquery": "^2.2.0",
     "metalsmith": "^2.1.0",
     "metalsmith-layouts": "^1.4.2",
     "metalsmith-markdown": "^0.2.1",
+    "node-lessify": "^0.1.1",
     "swig": "^1.4.2"
   }
 }
