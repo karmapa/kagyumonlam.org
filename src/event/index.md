@@ -1,7 +1,6 @@
 ---
 layout: event.swig
-title: This Year's Event
-test: this is a test
+title: This Year's Event Schedule
 schedule_sections:
     -
         title: Virtue in the Beginning
@@ -49,8 +48,6 @@ schedule_sections:
                 time: "9:00-10:30 am"
                 description: "Teachings on Mind Training: Potowa's Long Soliloquy"
 ---
-
-# This Year's Event
 
 ## Schedule
 
