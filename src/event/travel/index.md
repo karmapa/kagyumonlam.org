@@ -4,8 +4,6 @@ title: Travel to Bodhgaya
 
 ---
 
-## Travel to Bodhgaya
-
 ### Major Cities Nearby 
 
 Delhi – Bodhgaya ................. 1,008 km

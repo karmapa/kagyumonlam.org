@@ -17,13 +17,36 @@ var addPath = function(files, metalsmith, done) {
     files[filePath].path = (dirname == ".") ? "/" : "/" + dirname;
 	}
 	done();
+};
 
+/**
+ *  Add `currentNavigation` to point to the top-level navigation item for
+ *  rendering sub-navigation on a page.  This depends on the `addPath` plugin
+ *  above.
+ **/
+var addCurrentNav = function(files, metalsmith, done) {
+  var navigation = metalsmith.metadata().navigation;
 
-    console.log("data");
-    console.log(data);
+  var pagePath;
+  var topLevelPagePath;
+  var navItem;
+  for (var filePath in files) {
+    pagePath = files[filePath].path;
+    topLevelPagePath = pagePath.split("/")[1];
 
-		// add to path data for use in links in templates
-		//data.path = '.' == path ? '' : path;
+    // find item in navigation metadata
+    for (var navItemIndex in navigation) {
+      navItem = navigation[navItemIndex];
+
+      if (navItem.url.match(topLevelPagePath)) {
+        //console.log(`Matched page '${pagePath}' with nav url '${navItem.url}'`);
+        files[filePath].currentNavigation = navItem;
+        break;
+      }
+    }
+
+  }
+  done();
 };
 
 Metalsmith(__dirname)
@@ -33,6 +56,7 @@ Metalsmith(__dirname)
   }))
   .use(markdown())
   .use(addPath)
+  .use(addCurrentNav)
   .use(layouts("swig"))
   .build(function (err) {
     if (err) {

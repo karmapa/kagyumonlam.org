@@ -3,8 +3,6 @@ layout: event.swig
 title: Registration Information
 ---
 
-## Registration Information
-
 New members, please [register here](http://www.milaguru.org/amember/signup.php). 
 Groups, please email [name@email.com]
 If you are already a member, you can login to [renew your membership](http://www.milaguru.org/amember/member.php) for 2016. 

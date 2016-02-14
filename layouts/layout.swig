@@ -11,6 +11,7 @@
   <body>
     <!--<pre>
       path: {{path}}
+      currentNavigation: {{currentNavigation|json}}
     </pre>-->
     <nav class="navbar navbar-default">
       <div class="container-fluid">
@@ -22,27 +23,38 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Kagyu Monlam</a>
+          <a class="navbar-brand" href="/">Kagyu Monlam</a>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             {% for n in navigation %}
-              
+
               <li {% if n.url == path %}class="active"{% endif %}>
                 <a href="{{n.url}}">{{n.title}}</a>
                 {% if n.url == path %}
                   <span class="sr-only">(current)</span>
                 {% endif %}
               </li>
+
             {% endfor %}
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
 
+
 		<main role="main" class="container">
+      {% if currentNavigation.children %}
+        <nav>
+          <ul class="nav nav-pills">
+            {% for n in currentNavigation.children %}
+              <li role="presentation" {% if n.url == path %}class="active"{% endif %}><a href="{{n.url}}">{{n.title}}</a></li>
+            {% endfor %}
+          </ul>
+        </nav>
+      {% endif %}
+
       {% block main %}
         {% autoescape false %}
           {{contents}}

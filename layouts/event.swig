@@ -1,6 +1,9 @@
 {% extends "./layout.swig" %}
 
 {% block main %}
+
+  <h2>{{title}}</h2>
+
   {{contents|safe}}
 
   {% for section in schedule_sections %}
