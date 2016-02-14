@@ -9,6 +9,9 @@
 
   </head>
   <body>
+    <!--<pre>
+      path: {{path}}
+    </pre>-->
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -26,7 +29,13 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             {% for n in navigation %}
-              <li><a href="{{n.url}}">{{n.title}}</a></li>
+              
+              <li {% if n.url == path %}class="active"{% endif %}>
+                <a href="{{n.url}}">{{n.title}}</a>
+                {% if n.url == path %}
+                  <span class="sr-only">(current)</span>
+                {% endif %}
+              </li>
             {% endfor %}
           </ul>
         </div><!-- /.navbar-collapse -->

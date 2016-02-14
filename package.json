@@ -28,7 +28,6 @@
     "metalsmith-layouts": "^1.4.2",
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-metadata": "0.0.4",
-    "metalsmith-path": "^0.1.0",
     "node-lessify": "^0.1.1",
     "swig": "^1.4.2"
   }
