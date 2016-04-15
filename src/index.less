@@ -1,1 +1,144 @@
 @import "node_modules/bootstrap/less/bootstrap.less";
+@import url(https://fonts.googleapis.com/css?family=PT+Serif:700|Montserrat:400,700);
+
+
+@font-face {
+    font-family: 'montserratlight';
+    src: url('/media/webfontkit-20160415-155934/montserrat-light-webfont.eot');
+    src: url('/media/webfontkit-20160415-155934/montserrat-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/media/webfontkit-20160415-155934/montserrat-light-webfont.woff2') format('woff2'),
+         url('/media/webfontkit-20160415-155934/montserrat-light-webfont.woff') format('woff'),
+         url('/media/webfontkit-20160415-155934/montserrat-light-webfont.ttf') format('truetype'),
+         url('/media/webfontkit-20160415-155934/montserrat-light-webfont.svg#montserratlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+@font-face {
+    font-family: 'montserratblack';
+    src: url('/media/webfontkit-20160415-155934/montserrat-black-webfont.eot');
+    src: url('/media/webfontkit-20160415-155934/montserrat-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/media/webfontkit-20160415-155934/montserrat-black-webfont.woff2') format('woff2'),
+         url('/media/webfontkit-20160415-155934/montserrat-black-webfont.woff') format('woff'),
+         url('/media/webfontkit-20160415-155934/montserrat-black-webfont.ttf') format('truetype'),
+         url('/media/webfontkit-20160415-155934/montserrat-black-webfont.svg#montserratblack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+@font-face {
+    font-family: 'montserratregular';
+    src: url('/media/webfontkit-20160415-155934/montserrat-regular-webfont.eot');
+    src: url('/media/webfontkit-20160415-155934/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/media/webfontkit-20160415-155934/montserrat-regular-webfont.woff2') format('woff2'),
+         url('/media/webfontkit-20160415-155934/montserrat-regular-webfont.woff') format('woff'),
+         url('/media/webfontkit-20160415-155934/montserrat-regular-webfont.ttf') format('truetype'),
+         url('/media/webfontkit-20160415-155934/montserrat-regular-webfont.svg#montserratregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Colors */
+@headingsAccentColor: #243FAA; // blue
+@textColor: #666666;
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: @textColor;
+  font-size: 14pt;
+
+  background-image: url('/media/flags_background_1680.png');
+}
+
+h1 {
+  font-family: 'PT Serif', serif;
+}
+
+ul.nav {
+  font-family: 'montserratregular', 'Montserrat', sans-serif;
+}
+
+h2 {
+
+  span.h2thin {
+    font-family: 'montserratlight', 'Montserrat', sans-serif;
+  }
+
+  span.h2thick {
+    font-family: 'montserratblack', 'Montserrat', sans-serif;
+    letter-spacing: 0.05em;
+  }
+
+  margin-bottom: 0.2em;
+}
+
+h1, h2, ul.nav li a {
+  text-transform: uppercase;
+  color: @headingsAccentColor !important;
+}
+
+
+div.navbar-header {
+  float: none;
+}
+
+a.navbar-brand {
+  height: auto;
+
+  div.monlamSwish, h1 {
+    display: inline-block;
+  }
+  
+  .monlamSwish {
+    svg {
+      fill: @headingsAccentColor;
+      width: 175px;
+    }
+  }
+
+  h1 {
+    position: relative;
+    top: -40px;
+    left: -60px;
+  }
+
+  div.subtitle {
+    position: relative;
+    top: -40px;
+    left: 120px;
+  }
+}
+
+main {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+nav div.container {
+  padding: 0;
+}
+
+nav div.container div.collapse {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 0;
+  border-bottom: 8px solid @headingsAccentColor;
+}
+
+.navbar-default {
+  background-color: transparent;
+  border: 0;
+}
+
+.navbar-header {
+  background-color: white;
+}

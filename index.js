@@ -2,6 +2,7 @@ var Metalsmith = require("metalsmith");
 var markdown = require("metalsmith-markdown");
 var layouts = require("metalsmith-layouts");
 var metadata = require("metalsmith-metadata");
+var watch = require("metalsmith-watch");
 
 var path = require("path");
 
@@ -49,7 +50,7 @@ var addCurrentNav = function(files, metalsmith, done) {
   done();
 };
 
-Metalsmith(__dirname)
+var builder = Metalsmith(__dirname)
   .ignore(["*.js", "*.less", "*.swp"])
   .use(metadata({
     navigation: "navigation.yaml"
@@ -57,11 +58,22 @@ Metalsmith(__dirname)
   .use(markdown())
   .use(addPath)
   .use(addCurrentNav)
-  .use(layouts("swig"))
-  .build(function (err) {
-    if (err) {
-      throw err;
-    } else {
-      console.log("Build complete!");
+  .use(layouts("swig"));
+
+if (process.argv.length > 2 && process.argv[2] == "watch") {
+  // watch files for changes
+  builder.use(watch({
+    paths: {
+      "${source}/**/*": true,
+      "layouts/**/*": "**/*.md"
     }
-  });
+  }));
+}
+
+builder.build(function (err) {
+  if (err) {
+    throw err;
+  } else {
+    console.log("Build complete!");
+  }
+});

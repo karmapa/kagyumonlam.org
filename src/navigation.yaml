@@ -2,17 +2,10 @@
   title: "Home"
   url: "/"
 -
-  title: "History"
-  url: "/history"
-  children:
-    -
-      title: "History of Bodhgaya"
-      url: "/history/bodhgaya"
-    -
-      title: "His Holiness the Karmapa"
-      url: "/history/karmapa"
+  title: "Teachings"
+  url: "#"
 -
-  title: "This Year's Event"
+  title: "Monlam 2017"
   url: "/event"
   children:
     -
@@ -28,8 +21,21 @@
       title: "Travel to Bodhgaya"
       url: "/event/travel"
 -
+  title: "History"
+  url: "/history"
+  children:
+    -
+      title: "History of Bodhgaya"
+      url: "/history/bodhgaya"
+    -
+      title: "His Holiness the Karmapa"
+      url: "/history/karmapa"
+-
+  title: "Membership"
+  url: "#"
+-
   title: "Contacts"
   url: "/contacts"
 -
-  title: "Support"
-  url: "/support"
+  title: "Registration"
+  url: "#"

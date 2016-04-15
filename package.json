@@ -7,8 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -Rf build/*",
     "build_frontend": "browserify -o ./build/build.js ./src/index.js",
+    "watch_frontend": "watchify -v -d -o ./build/build.js ./src/index.js",
     "build_site": "node index.js",
-    "build": "npm run clean && npm run build_site && npm run build_frontend"
+    "build": "npm run clean && npm run build_site && npm run build_frontend",
+    "watch": "node index.js watch"
   },
   "browserify": {
     "transform": [
@@ -30,5 +32,9 @@
     "metalsmith-metadata": "0.0.4",
     "node-lessify": "^0.1.1",
     "swig": "^1.4.2"
+  },
+  "devDependencies": {
+    "metalsmith-watch": "^1.0.1",
+    "watchify": "^3.7.0"
   }
 }
