@@ -84,6 +84,19 @@ h1, h2, ul.nav li a {
   color: @headingsAccentColor !important;
 }
 
+main {
+  /* Extra small devices (phones, less than 768px) */
+  /* No media query since this is the default in Bootstrap */
+
+  text-align: center;
+  /* Small devices (tablets, 768px and up) */
+  @media (min-width: @screen-sm-min) {
+
+    text-align: left;
+
+  }
+}
+
 
 div.navbar-header {
   float: none;
@@ -95,25 +108,51 @@ a.navbar-brand {
   div.monlamSwish, h1 {
     display: inline-block;
   }
-  
-  .monlamSwish {
-    svg {
-      fill: @headingsAccentColor;
+
+  div.monlamSwish svg {
+    fill: @headingsAccentColor;
+    width: 100%;
+    
+  }
+
+  /* Extra small devices (phones, less than 768px) */
+  /* No media query since this is the default in Bootstrap */
+
+  text-align: center;
+
+  /* Small devices (tablets, 768px and up) */
+  @media (min-width: @screen-sm-min) {
+
+    text-align: left;
+
+    .monlamSwish {
       width: 175px;
+    }
+
+    h1 {
+      position: relative;
+      top: -40px;
+      left: -60px;
+    }
+
+    div.subtitle {
+      position: relative;
+      top: -40px;
+      left: 120px;
     }
   }
 
-  h1 {
-    position: relative;
-    top: -40px;
-    left: -60px;
+  /* Medium devices (desktops, 992px and up) */
+  @media (min-width: @screen-md-min) {
+
   }
 
-  div.subtitle {
-    position: relative;
-    top: -40px;
-    left: 120px;
+  /* Large devices (large desktops, 1200px and up) */
+  @media (min-width: @screen-lg-min) {
+
   }
+
+  
 }
 
 main {
