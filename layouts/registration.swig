@@ -55,7 +55,7 @@
 <input type="hidden" name="lc" value="US">
 <input type="hidden" name="currency_code" value="USD">
 <input type="hidden" name="no_note" value="1">
-<input type="hidden" name="return" value="http://www.kagyumonlam.org/thankfordonation.html">
+<input type="hidden" name="return" value="http://www.kagyumonlam.org/thankyou">
 
 <input type="image" src="images/x-click-but22.gif" border="0" name="I11" alt="Make payments with PayPal - it's fast, free and secure!" width="87" height="23">
 <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
@@ -77,7 +77,7 @@
 <input type="hidden" name="lc" value="US">
 <input type="hidden" name="currency_code" value="USD">
 <input type="hidden" name="no_note" value="1">
-<input type="hidden" name="return" value="http://www.kagyumonlam.org/thankfordonation.html">
+<input type="hidden" name="return" value="http://www.kagyumonlam.org/thankyou">
 
 <input type="image" src="images/x-click-but22.gif" border="0" name="I12" alt="Make payments with PayPal - it's fast, free and secure!" width="87" height="23">
 <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
@@ -100,7 +100,7 @@ $350.00 US</td>
 <input type="hidden" name="lc" value="US">
 <input type="hidden" name="currency_code" value="USD">
 <input type="hidden" name="no_note" value="1">
-<input type="hidden" name="return" value="http://www.kagyumonlam.org/thankfordonation.html">
+<input type="hidden" name="return" value="http://www.kagyumonlam.org/thankyou">
 
 <input type="image" src="images/x-click-but22.gif" border="0" name="I15" alt="Make payments with PayPal - it's fast, free and secure!" width="87" height="23">
 <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
@@ -122,7 +122,7 @@ $250.00 US</td>
 <input type="hidden" name="lc" value="US">
 <input type="hidden" name="currency_code" value="USD">
 <input type="hidden" name="no_note" value="1">
-<input type="hidden" name="return" value="http://www.kagyumonlam.org/thankfordonation.html">
+<input type="hidden" name="return" value="http://www.kagyumonlam.org/thankyou">
 
 <input type="image" src="images/x-click-but22.gif" border="0" name="I13" alt="Make payments with PayPal - it's fast, free and secure!" width="87" height="23">
 <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
@@ -149,7 +149,7 @@ $250.00 US</td>
 <input type="hidden" name="lc" value="US">
 <input type="hidden" name="currency_code" value="USD">
 <input type="hidden" name="no_note" value="1">
-<input type="hidden" name="return" value="http://www.kagyumonlam.org/thankfordonation.html">
+<input type="hidden" name="return" value="http://www.kagyumonlam.org/thankyou">
 
 <input type="image" src="images/x-click-but22.gif" border="0" name="I14" alt="Make payments with PayPal - it's fast, free and secure!" width="87" height="23">
 <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
@@ -177,7 +177,7 @@ $250.00 US</td>
 <input type="hidden" name="amount" value="6000.00">
 <input type="hidden" name="page_style" value="KagyuMonlam">
 <input type="hidden" name="no_shipping" value="1">
-<input type="hidden" name="return" value="http://www.kagyumonlam.org/thankfordonation.html">
+<input type="hidden" name="return" value="http://www.kagyumonlam.org/thankyou">
 <input type="hidden" name="no_note" value="1">
 <input type="hidden" name="currency_code" value="USD">
 <input type="hidden" name="lc" value="US">
