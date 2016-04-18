@@ -31,11 +31,5 @@
       title: "His Holiness the Karmapa"
       url: "/history/karmapa"
 -
-  title: "Membership"
-  url: "#"
--
-  title: "Contacts"
-  url: "/contacts"
--
   title: "Registration"
-  url: "#"
+  url: "/registration"
