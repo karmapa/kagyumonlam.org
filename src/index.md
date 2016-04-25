@@ -4,21 +4,25 @@ title: Kagyu Monlam Chenmo
 event_date: February 12-23, 2016
 event_location: Bodhgaya, India
 highlights:
-    - 
-       imagesrc: http://thecatapi.com/api/images/get?format=src&type=png&size=med&cachebust=1
-    - 
-       imagesrc: http://thecatapi.com/api/images/get?format=src&type=png&size=med&cachebust=2
-    - 
-       imagesrc: http://thecatapi.com/api/images/get?format=src&type=png&size=med&cachebust=3
-    - 
-       imagesrc: http://thecatapi.com/api/images/get?format=src&type=png&size=med&cachebust=4 
-    - 
-       imagesrc: http://thecatapi.com/api/images/get?format=src&type=png&size=med&cachebust=5 
-    - 
-       imagesrc: http://thecatapi.com/api/images/get?format=src&type=png&size=med&cachebust=6 
-    - 
-       imagesrc: http://thecatapi.com/api/images/get?format=src&type=png&size=med&cachebust=7 
-    - 
-       imagesrc: http://thecatapi.com/api/images/get?format=src&type=png&size=med&cachebust=8 
+    -
+        guid: http://kagyuoffice.org/?p=8170
+    -
+        guid: http://kagyuoffice.org/?p=8163
+    -
+        guid: http://kagyuoffice.org/?p=8154
+    -
+        guid: http://kagyuoffice.org/?p=8148
+    -
+        guid: http://kagyuoffice.org/?p=8125
+    -
+        guid: http://kagyuoffice.org/?p=7219
+    -
+        guid: http://kagyuoffice.org/?p=7144
+    -
+        guid: http://kagyuoffice.org/?p=7126
+    -
+        guid: http://kagyuoffice.org/?p=7119
+    -
+        guid: http://kagyuoffice.org/?p=6458
 
 ---

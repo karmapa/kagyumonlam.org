@@ -25,12 +25,14 @@
   "dependencies": {
     "bootstrap": "^3.3.6",
     "browserify": "^13.0.0",
+    "feedparser": "^1.1.4",
     "jquery": "^2.2.0",
     "metalsmith": "^2.1.0",
     "metalsmith-layouts": "^1.4.2",
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-metadata": "0.0.4",
     "node-lessify": "^0.1.1",
+    "request": "^2.72.0",
     "swig": "^1.4.2"
   },
   "devDependencies": {
