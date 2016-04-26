@@ -79,11 +79,14 @@ var parseMonlamFeedItem = function (originalItem) {
     //console.log(originalItem["rss:p"][0]["a"]["img"]["@"]);
     //console.log(originalItem["rss:p"][1]["#"]);
 
-    console.log(originalItem.guid);
+    //console.log(originalItem.guid);
 
     enhancedItem.img = originalItem["rss:p"][0]["a"]["img"]["@"];
-    enhancedItem.alt = originalItem["rss:p"][1]["#"];
+    enhancedItem.title = originalItem["rss:title"]["#"];
   }
+
+  //console.log("enhancedItem");
+  //console.log(enhancedItem);
   
   return enhancedItem;
 

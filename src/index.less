@@ -1,5 +1,8 @@
 @import "node_modules/bootstrap/less/bootstrap.less";
+@import "node_modules/lesshat/build/lesshat-prefixed.less";
 @import url(https://fonts.googleapis.com/css?family=PT+Serif:700|Montserrat:400,700);
+
+@icon-font-path:          "/media/";
 
 
 @font-face {
@@ -90,12 +93,20 @@ main {
   /* No media query since this is the default in Bootstrap */
 
   text-align: center;
+  padding-top: 2em;
+
+  section {
+    margin-bottom: 4em;
+  }
+
   /* Small devices (tablets, 768px and up) */
   @media (min-width: @screen-sm-min) {
 
     text-align: left;
 
   }
+
+
 }
 
 
@@ -181,4 +192,62 @@ nav div.container div.collapse {
 
 .navbar-header {
   background-color: white;
+}
+
+div.carousel-inner {
+  > .item {
+    .row {
+      background-color: white;
+      .lh-transition(opacity 500 ease-in);      
+      div {
+      }
+    }
+  }
+  > .next {
+
+    .row {
+      opacity: 0.0;
+    }
+    
+  }
+}
+
+@carousel-control-color:                      @headingsAccentColor;
+@carousel-control-width:                      15%;
+@carousel-control-opacity:                    .5;
+@carousel-control-font-size:                  20px;
+@carousel-indicator-active-bg:                @headingsAccentColor;
+@carousel-indicator-border-color:             @headingsAccentColor;
+.carousel.left {
+  .carousel-indicators {
+    text-align: left;
+  }
+
+  .carousel-inner {
+    > .item {
+      .row {
+        div {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+.carousel.right {
+  .carousel-indicators {
+    right: 10%;
+    text-align: right;
+  }
+  .carousel-inner {
+    > .item {
+      .row {
+        div {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
+.carousel-control.left, .carousel-control.right {
+  background: none;
 }
