@@ -10,7 +10,8 @@
     "watch_frontend": "watchify -v -d -o ./build/build.js ./src/index.js",
     "build_site": "node index.js",
     "build": "npm run clean && npm run build_site && npm run build_frontend",
-    "watch": "node index.js watch"
+    "watch": "node index.js watch",
+    "serve": "http-server ./build/"
   },
   "browserify": {
     "transform": [
@@ -26,6 +27,7 @@
     "bootstrap": "^3.3.6",
     "browserify": "^13.0.0",
     "feedparser": "^1.1.4",
+    "http-server": "^0.9.0",
     "jquery": "^2.2.0",
     "lesshat": "^3.0.2",
     "metalsmith": "^2.1.0",
