@@ -3,6 +3,7 @@ var markdown = require("metalsmith-markdown");
 var layouts = require("metalsmith-layouts");
 var metadata = require("metalsmith-metadata");
 var watch = require("metalsmith-watch");
+var serve = require("metalsmith-serve");
 var cons = require("consolidate");
 var nunjucks = require("nunjucks");
 
@@ -155,8 +156,11 @@ if (process.argv.length > 2 && process.argv[2] == "watch") {
     paths: {
       "${source}/**/*": true,
       "layouts/**/*": "**/*.md"
-    }
+    },
+    livereload: true
   }));
+
+  builder.use(serve());
 };
 
 console.log("Retrieving monlam feed...");

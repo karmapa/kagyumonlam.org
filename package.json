@@ -34,6 +34,7 @@
     "metalsmith-layouts": "^1.4.2",
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-metadata": "0.0.4",
+    "metalsmith-serve": "0.0.7",
     "node-lessify": "^0.1.1",
     "nunjucks": "^2.5.2",
     "request": "^2.72.0"
