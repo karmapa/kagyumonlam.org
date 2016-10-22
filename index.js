@@ -4,15 +4,12 @@ var layouts = require("metalsmith-layouts");
 var metadata = require("metalsmith-metadata");
 var watch = require("metalsmith-watch");
 var serve = require("metalsmith-serve");
-var cons = require("consolidate");
-var nunjucks = require("nunjucks");
+var browserify = require("metalsmith-browserify");
 
 var FeedParser = require("feedparser");
 var request = require("request");
 
 var path = require("path");
-
-cons.requires.nunjucks = nunjucks.configure('layouts/', {});
 
 // all retrieved posts from the feed
 var retrievedPosts = {
@@ -162,6 +159,11 @@ if (process.argv.length > 2 && process.argv[2] == "watch") {
 
   builder.use(serve());
 };
+
+
+builder.use(browserify('build.js', [
+  'src/index.js'
+]));
 
 console.log("Retrieving monlam feed...");
 retrieveMonlamTagFeed(function (err) {

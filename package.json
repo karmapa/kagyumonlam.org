@@ -6,12 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -Rf build/*",
-    "build_frontend": "browserify -o ./build/build.js ./src/index.js",
-    "watch_frontend": "watchify -v -d -o ./build/build.js ./src/index.js",
-    "build_site": "node index.js",
-    "build": "npm run clean && npm run build_site && npm run build_frontend",
-    "watch": "node index.js watch",
-    "serve": "http-server ./build/"
+    "build": "node index.js",
+    "watch": "node index.js watch"
   },
   "browserify": {
     "transform": [
@@ -31,6 +27,7 @@
     "jquery": "^2.2.0",
     "lesshat": "^3.0.2",
     "metalsmith": "^2.1.0",
+    "metalsmith-browserify": "^0.1.0",
     "metalsmith-layouts": "^1.4.2",
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-metadata": "0.0.4",
