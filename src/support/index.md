@@ -1,5 +1,5 @@
 ---
-layout: support.swig
+layout: support.njk
 title: Support
 ---
 

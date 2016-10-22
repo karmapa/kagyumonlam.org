@@ -1,5 +1,5 @@
 ---
-layout: layout.swig
+layout: layout.njk
 title: Thank You!
 ---
 

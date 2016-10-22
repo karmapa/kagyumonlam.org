@@ -34,9 +34,10 @@
     "metalsmith-layouts": "^1.4.2",
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-metadata": "0.0.4",
+    "metalsmith-serve": "0.0.7",
     "node-lessify": "^0.1.1",
-    "request": "^2.72.0",
-    "swig": "^1.4.2"
+    "nunjucks": "^2.5.2",
+    "request": "^2.72.0"
   },
   "devDependencies": {
     "metalsmith-watch": "^1.0.1",
