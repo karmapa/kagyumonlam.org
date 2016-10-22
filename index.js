@@ -25,11 +25,11 @@ var retrievedPosts = {
 var addPath = function(files, metalsmith, done) {
   var dirname;
   var basename;
-	for (var filePath in files) {
+  for (var filePath in files) {
     dirname = path.dirname(filePath);
     files[filePath].path = (dirname == ".") ? "/" : "/" + dirname;
-	}
-	done();
+  }
+  done();
 };
 
 var addRetrievedPosts = function (files, metalsmith, done) {
@@ -73,7 +73,7 @@ var parseMonlamFeedItem = function (originalItem) {
   var enhancedItem = originalItem;
 
   if (originalItem) {
-    
+
     //console.log("originalItem[\"rss:p\"]");
     //console.log(originalItem["rss:p"]);
     //console.log(originalItem["rss:p"][0]["a"]["img"]["@"]);
@@ -87,7 +87,7 @@ var parseMonlamFeedItem = function (originalItem) {
 
   //console.log("enhancedItem");
   //console.log(enhancedItem);
-  
+
   return enhancedItem;
 
 };
@@ -137,7 +137,7 @@ var builder = Metalsmith(__dirname)
   .use(addPath)
   .use(addCurrentNav)
   .use(addRetrievedPosts)
-  .use(layouts("swig"));
+  .use(layouts("nunjucks"));
 
 if (process.argv.length > 2 && process.argv[2] == "watch") {
   // watch files for changes
