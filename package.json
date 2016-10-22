@@ -36,8 +36,7 @@
     "metalsmith-metadata": "0.0.4",
     "node-lessify": "^0.1.1",
     "nunjucks": "^2.5.2",
-    "request": "^2.72.0",
-    "swig": "^1.4.2"
+    "request": "^2.72.0"
   },
   "devDependencies": {
     "metalsmith-watch": "^1.0.1",

@@ -1,5 +1,5 @@
 ---
-layout: event.swig
+layout: event.njk
 title: This Year's Event Schedule
 schedule_sections:
     -

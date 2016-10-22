@@ -3,11 +3,15 @@ var markdown = require("metalsmith-markdown");
 var layouts = require("metalsmith-layouts");
 var metadata = require("metalsmith-metadata");
 var watch = require("metalsmith-watch");
+var cons = require("consolidate");
+var nunjucks = require("nunjucks");
 
 var FeedParser = require("feedparser");
 var request = require("request");
 
 var path = require("path");
+
+cons.requires.nunjucks = nunjucks.configure('layouts/', {});
 
 // all retrieved posts from the feed
 var retrievedPosts = {
@@ -137,7 +141,13 @@ var builder = Metalsmith(__dirname)
   .use(addPath)
   .use(addCurrentNav)
   .use(addRetrievedPosts)
-  .use(layouts("nunjucks"));
+  .use(layouts({
+    engine: "nunjucks",
+    directory: "layouts",
+    settings: {
+      views: 'layouts'
+    }
+  }));
 
 if (process.argv.length > 2 && process.argv[2] == "watch") {
   // watch files for changes

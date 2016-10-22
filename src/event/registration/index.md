@@ -1,5 +1,5 @@
 ---
-layout: event.swig
+layout: event.njk
 title: Registration Information
 ---
 

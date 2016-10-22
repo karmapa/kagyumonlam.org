@@ -1,5 +1,5 @@
 ---
-layout: registration.swig
+layout: registration.njk
 title: Registration
 ---
 

@@ -1,5 +1,5 @@
 ---
-layout: history.swig
+layout: history.njk
 title: His Holiness the Karmapa
 ---
 

@@ -1,7 +1,5 @@
-{% extends "./layout.swig" %}
+{% extends "./layout.njk" %}
 
 {% block main %}
-  {% autoescape false %}
-    {{contents}}
-  {% endautoescape %}
+    {{contents | safe}}
 {% endblock %}
