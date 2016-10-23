@@ -18,12 +18,18 @@ highlights:
         guid: http://kagyuoffice.org/?p=8163
 
 ---
+
 ## Livestream
 To view recorded content from the Kagyu Monlam, please visit the (Karmapa channel)[https://www.youtube.com/user/Karmapateachings] on YouTube.
 
-## Location
-(Kagyu Monlam Pavilion)[https://goo.gl/maps/hZsxsW1zqMJ2]
-Bodhgaya, Bihar 824231, India
+## Attending in Person
+If you wish to attend the Monlam in person, please use this process:
+
+  1. (Register)[/registration/] for the Monlam. 
+  1. Understand your (travel)[/travel/] options to and from Bodhgaya.
+  1. Book your (accommodation)[/attend/accommodation/]
+  1. Once you arrive in Bodhgaya, join us at the <a href="https://goo.gl/maps/hZsxsW1zqMJ2">Kagyu Monlam Pavilion</a>) and seek further information once you arrive. 
+
 
 ## Schedule
 |*Event*|*Date*|
@@ -37,3 +43,7 @@ Bodhgaya, Bihar 824231, India
 |Garchen New Year’s Celebration|Feb 27, 2017&ndash;Mar 1, 2017 (3 days)|
 |Marme Monlam|Mar 2, 2017|
 |4th Arya Kshema Winter Dharma Gathering|Mar 6, 2017&ndash;Mar 19, 2017 (14 days)|
+
+## Location
+(Kagyu Monlam Pavilion)[https://goo.gl/maps/hZsxsW1zqMJ2]
+Bodhgaya, Bihar 824231, India
