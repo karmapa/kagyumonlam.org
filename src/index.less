@@ -1,6 +1,6 @@
 @import "node_modules/bootstrap/less/bootstrap.less";
 @import "node_modules/lesshat/build/lesshat-prefixed.less";
-@import url(https://fonts.googleapis.com/css?family=PT+Serif:700|Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=PT+Serif:400,700|Montserrat:400,700);
 
 @icon-font-path:          "/media/";
 
@@ -56,14 +56,30 @@
 body {
   font-family: 'Arial', sans-serif;
   color: @textColor;
-  font-size: 14pt;
+  font-size: 16px;
 
   background-image: url('/media/flags_background_1680.png');
 }
 
 h1 {
+  font-size: 1.2em;
+}
+
+p.subtitle {
+  font-size: 0.8em;
+}
+
+h1, p.subtitle {
   font-family: 'PT Serif', serif;
 }
+h1 {
+  font-weight: 700;
+}
+
+p.subtitle {
+  font-weight: 400;
+}
+
 
 ul.nav {
   font-family: 'montserratregular', 'Montserrat', sans-serif;
@@ -83,7 +99,7 @@ h2 {
   margin-bottom: 0.2em;
 }
 
-h1, h2, ul.nav li a {
+h1, h2, p.subtitle, ul.nav li a {
   text-transform: uppercase;
   color: @headingsAccentColor !important;
 }
@@ -110,49 +126,68 @@ main {
 }
 
 
-div.navbar-header {
-  float: none;
-}
+/*div.navbar-header {*/
+  /*float: none;*/
+/*}*/
 
 a.navbar-brand {
   height: auto;
-
-  div.monlamSwish, h1 {
-    display: inline-block;
+  width: 100%;
+  padding: 1.2em;
+  
+  div.monlamSwish, div.title_and_subtitle {
+    float: left;
   }
 
-  div.monlamSwish svg {
-    fill: @headingsAccentColor;
-    width: 100%;
+
+  div.title_and_subtitle {
+    position: relative;
+    left: -1.25em;
+    top: 1.0em;
     
+    h1 {
+      margin: 0;
+    }
+    p.subtitle {
+    }
   }
+
+
+  div.monlamSwish {
+    width: 4em;
+
+    svg {
+      fill: @headingsAccentColor;
+    }
+  }
+
 
   /* Extra small devices (phones, less than 768px) */
   /* No media query since this is the default in Bootstrap */
 
-  text-align: center;
+  /*text-align: center;*/
 
   /* Small devices (tablets, 768px and up) */
-  @media (min-width: @screen-sm-min) {
+  /*@media (min-width: @screen-sm-min) {*/
 
-    text-align: left;
+    /*text-align: left;*/
 
-    .monlamSwish {
-      width: 175px;
-    }
+    /*.monlamSwish {*/
+      /*width: 175px;*/
+    /*}*/
 
-    h1 {
-      position: relative;
-      top: -40px;
-      left: -60px;
-    }
+    /*h1 {*/
+      /*position: relative;*/
+      /*top: -40px;*/
+      /*left: -60px;*/
+    /*}*/
 
-    div.subtitle {
-      position: relative;
-      top: -40px;
-      left: 120px;
-    }
-  }
+    /*div.subtitle {*/
+      /*position: relative;*/
+      /*top: -40px;*/
+      /*left: 120px;*/
+    /*}*/
+  /*}*/
 
   /* Medium devices (desktops, 992px and up) */
   @media (min-width: @screen-md-min) {
@@ -251,3 +286,37 @@ div.carousel-inner {
 .carousel-control.left, .carousel-control.right {
   background: none;
 }
+
+.collapse {
+  height: auto;
+  width: auto;
+}
+
+.collapse.height {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.35s ease;
+  -moz-transition: height 0.35s ease;
+  -o-transition: height 0.35s ease;
+  transition: height 0.35s ease;
+}
+
+.collapse.width {
+  position: relative;
+  width: 0;
+  overflow: hidden;
+  -webkit-transition: width 0.35s ease;
+  -moz-transition: width 0.35s ease;
+  -o-transition: width 0.35s ease;
+  transition: width 0.35s ease;
+}
+
+.collapse.in.width {
+  width: auto;
+}
+
+.collapse.in.height {
+  height: auto;
+}
+
