@@ -6,7 +6,7 @@ title: Traveling to Bodhgaya
 
 We recommend that you read this page in its entirety and use it to make a checklist of items you will bring to Bodhgaya. 
 
-### <a name="0"></a>Table of Contents
+# <a name="0"></a>Table of Contents
 * [Major Cities Nearby](#1)
 * [By Air](#2)
 * [By Train](#3)
@@ -18,7 +18,7 @@ We recommend that you read this page in its entirety and use it to make a checkl
 * [Other Useful Tips](#9)
 
 
-### <a name="1"></a>Major Cities Nearby 
+# <a name="1"></a>Major Cities Nearby 
 
 * Delhi: 1,008 km
 * Gaya: 16 km
@@ -27,7 +27,7 @@ We recommend that you read this page in its entirety and use it to make a checkl
 
 ([top](#1))
 
-### <a name="2"></a>Travel by Air
+# <a name="2"></a>Travel by Air
 
 Gaya Airport is 7 km from the town of Bodhgaya. Between October and February, a few international and domestic airlines offer flights to Gaya:
 
@@ -41,7 +41,7 @@ Long distance bus is also an option for travel from the airport in Patna or Vara
 
 ([top](#1))
 
-### <a name="3"></a>By Train 
+# <a name="3"></a>By Train 
 
 Travel by train is inexpensive and offers a unique opportunity to see the country and meet the people. However, travelers are advised to exercise caution for a safe journey. Arriving in Bodhgaya during daylight hours is recommended for your safety.
 
@@ -57,7 +57,7 @@ Railways](http://www.indianrail.gov.in) and various travel agencies.
 
 ([top](#1))
 
-#### <a name="4"></a>Tips for Travel by Train 
+# <a name="4"></a>Tips for Travel by Train 
 
 * Train tickets for most lines are sold in several different categories: A/C First Class, A/C Sleeper in two- or three-tier, A/C Chair Car, 2nd Class (non A/C) in two- or three-tier. Because these categories can be confusing, it is best to consult a travel agent or tourist service center before purchasing one.
 * Timetables (Trains at a Glance) can be hard to read or understand. It's therefore easier to buy a train ticket through a travel agent or tourist service center.
@@ -67,7 +67,7 @@ Railways](http://www.indianrail.gov.in) and various travel agencies.
 
 ([top](#1))
 
-### <a name="5"></a>By Car or Jeep 
+# <a name="5"></a>By Car or Jeep 
 
 Bodhgaya is connected by road to many cities and towns. Reputable travel agencies can arrange for a reliable car or jeep with a dependable driver. 
 
@@ -79,7 +79,7 @@ Bodhgaya is connected by road to many cities and towns. Reputable travel agencie
 
 ([top](#1))
 
-### <a name="6"></a>Health
+# <a name="6"></a>Health
 
 Make sure that your vaccinations are up-to-date, especially for Hepatitis. Bring an adequate supply of prescription medicines, over the counter medications such as ibuprofen and nutrient supplements if you use them. Have your doctor recommend a basic travel medical kit. 
 
@@ -99,7 +99,7 @@ To protect your health and ensure a positive experience, please observe these gu
 
 ([top](#1))
 
-### <a name="7"></a>Safety
+# <a name="7"></a>Safety
 
 * In tourist areas, thieves and pickpockets mix in with the crowd of beggars. Keep your bags close to your body at all times. Avoid crowds or be extra careful when in the midst of crowds.
 
@@ -111,7 +111,7 @@ To protect your health and ensure a positive experience, please observe these gu
 
 ([top](#1))
 
-### <a name="8"></a>Weather and what to bring 
+# <a name="8"></a>Weather and what to bring 
 
 The Kagyu Monlam Chenmo usually takes place during winter months when the weather is pleasantly dry, warm, and sunny. During the day, the temperature is usually somewhere between 20-30ºC (68 to 86ºF), but early mornings and evenings it can drop as low as 4 or 5 ºC (40ºF). Bring layers of clothing to wear and a pair of new slippers or thick socks to wear at the Temple.
 
@@ -125,7 +125,7 @@ Bring a pair of shoes/sandals that are easy to slide off because you will be ask
 
 ([top](#1))
 
-### <a name="9"></a>Local Customs
+# <a name="9"></a>Local Customs
 
 * "Namaste" is an all-purpose greeting. It can be used in place of "Good morning," "Good afternoon," "Good evening," "Welcome," "How are you?" and so on.
 * When responding to a question, Indians tend to shake their heads from side to side. This can mean "OK," "No problem," or "Yes."
@@ -139,7 +139,7 @@ Bring a pair of shoes/sandals that are easy to slide off because you will be ask
 
 ([top](#1))
 
-### <a name="10"></a>Other Useful Tips:
+# <a name="10"></a>Other Useful Tips:
 
 * India has only one time zone and does not adopt daylight saving time (DST). It is 13 hours and 30 minutes ahead of the Pacific Time of North America during non-DST period, or 12 hours 30 minutes during DST period. It is 2 hours and 30 minutes behind Taiwan, Hong Kong, and China.
 * Electricity is 220-240 volts AC, and unstable in most areas. India uses 2- or 3-round-pin plugs but socket sizes vary and may not be always available at hotels. You may want to bring a universal adaptor and/or transformers.
