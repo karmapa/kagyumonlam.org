@@ -53,6 +53,11 @@
 @textColor: #666666;
 @brand-primary: @headingsAccentColor;
 
+/*@navbar-default-toggle-border-color: black;*/
+/*@navbar-default-toggle-hover-bg: black;*/
+/*@navbar-default-toggle-icon-bar-bg: black;*/
+/*@navbar-inverse-toggle-icon-bar-bg: black;*/
+
 body {
   font-family: 'Arial', sans-serif;
   color: @textColor;
@@ -81,9 +86,9 @@ p.subtitle {
 }
 
 
-ul.nav {
-  font-family: 'montserratregular', 'Montserrat', sans-serif;
-}
+/*ul.nav {*/
+  /*font-family: 'montserratregular', 'Montserrat', sans-serif;*/
+/*}*/
 
 h2 {
 
@@ -108,19 +113,19 @@ main {
   /* Extra small devices (phones, less than 768px) */
   /* No media query since this is the default in Bootstrap */
 
-  text-align: center;
+  /*text-align: center;
   padding-top: 2em;
 
   section {
     margin-bottom: 4em;
-  }
+  }*/
 
   /* Small devices (tablets, 768px and up) */
-  @media (min-width: @screen-sm-min) {
+  /*@media (min-width: @screen-sm-min) {*/
 
-    text-align: left;
+    /*text-align: left;*/
 
-  }
+  /*}*/
 
 
 }
@@ -131,16 +136,19 @@ main {
 /*}*/
 
 a.navbar-brand {
-  height: auto;
-  width: 100%;
-  padding: 1.2em;
+  height: inherit;
+  padding: 0;
+  /*width: 100%;*/
+  /*padding-bottom: 1.2em;*/
   
   div.monlamSwish, div.title_and_subtitle {
     float: left;
   }
 
 
+  // tighten up positioning between title and icon
   div.title_and_subtitle {
+    display: block;
     position: relative;
     left: -1.25em;
     top: 1.0em;
@@ -153,6 +161,7 @@ a.navbar-brand {
   }
 
 
+  // swish icon
   div.monlamSwish {
     width: 4em;
 
@@ -206,13 +215,13 @@ main {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-.navbar {
-  margin-bottom: 0;
-}
+/*.navbar {*/
+  /*margin-bottom: 0;*/
+/*}*/
 
-nav div.container {
-  padding: 0;
-}
+/*nav div.container {*/
+  /*padding: 0;*/
+/*}*/
 
 nav div.container div.collapse {
   background-color: rgba(255, 255, 255, 0.9);
@@ -220,13 +229,18 @@ nav div.container div.collapse {
   border-bottom: 8px solid @headingsAccentColor;
 }
 
-.navbar-default {
-  background-color: transparent;
-  border: 0;
-}
+/*.navbar-default {*/
+  /*background-color: transparent;*/
+  /*border: 0;*/
+/*}*/
 
 .navbar-header {
   background-color: white;
+
+  button.navbar-toggle {
+    float: left;
+    margin-left: 1.25em;
+  }
 }
 
 div.carousel-inner {
@@ -287,36 +301,87 @@ div.carousel-inner {
   background: none;
 }
 
-.collapse {
-  height: auto;
-  width: auto;
+/*.collapse {*/
+  /*height: auto;*/
+  /*width: auto;*/
+/*}*/
+
+/*.collapse.height {*/
+  /*position: relative;*/
+  /*height: 0;*/
+  /*overflow: hidden;*/
+  /*-webkit-transition: height 0.35s ease;*/
+  /*-moz-transition: height 0.35s ease;*/
+  /*-o-transition: height 0.35s ease;*/
+  /*transition: height 0.35s ease;*/
+/*}*/
+
+/*.collapse.width {*/
+  /*position: relative;*/
+  /*width: 0;*/
+  /*overflow: hidden;*/
+  /*-webkit-transition: width 2s ease;*/
+  /*-moz-transition: width 2s ease;*/
+  /*-o-transition: width 2s ease;*/
+  /*transition: width 2s ease;*/
+/*}*/
+
+/*.collapse.in.width {*/
+  /*width: auto;*/
+/*}*/
+
+/*.collapse.in.height {*/
+  /*height: auto;*/
+/*}*/
+
+body,html,.row-offcanvas {
+  height:100%;
 }
 
-.collapse.height {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  -webkit-transition: height 0.35s ease;
-  -moz-transition: height 0.35s ease;
-  -o-transition: height 0.35s ease;
-  transition: height 0.35s ease;
+body {
+  padding-top: 50px;
 }
 
-.collapse.width {
-  position: relative;
-  width: 0;
-  overflow: hidden;
-  -webkit-transition: width 2s ease;
-  -moz-transition: width 2s ease;
-  -o-transition: width 2s ease;
-  transition: width 2s ease;
+#sidebar {
+  width: inherit;
+  min-width: 220px;
+  max-width: 220px;
+  background-color:#f5f5f5;
+  float: left;
+  height:100%;
+  position:relative;
+  overflow-y:auto;
+  overflow-x:hidden;
+}
+#main {
+  height:100%;
+  overflow:auto;
 }
 
-.collapse.in.width {
-  width: auto;
-}
+/*
+ * off Canvas sidebar
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 768px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+    width:calc(100% + 220px);
+  }
 
-.collapse.in.height {
-  height: auto;
-}
+  .row-offcanvas-left
+  {
+    left: -220px;
+  }
 
+  .row-offcanvas-left.active {
+    left: 0;
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+  }
+}

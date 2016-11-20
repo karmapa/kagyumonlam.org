@@ -23,4 +23,7 @@ require("./index.less");
 
 $(document).ready(function () {
   console.log("Hello!");
+	$('[data-toggle=offcanvas]').click(function() {
+		$('.row-offcanvas').toggleClass('active');
+	});
 });
