@@ -13,7 +13,8 @@
     "transform": [
       [
         "node-lessify",
-        {}
+        {
+        }
       ]
     ]
   },
