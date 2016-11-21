@@ -1,54 +1,33 @@
 ---
 layout: event.njk
-title: This Year's Event Schedule
-schedule_sections:
-    -
-        title: Virtue in the Beginning
-        subtitle: Teachings on The Torch of True Meaning
-        date: February 12-13, 2016
-        location: Monlam Pavilion
-        schedule:
-            -
-                time: 8:00-9:00 am
-                description: Teachings on mandala offerings from the Torch of True Meaning
-                marker: I
-            -
-                time: 9:00-9:30 am
-                description: Tea Break
-            -
-                time: 9:30-10:30 am
-                description: Accumulation of mandala offerings
-            -
-                marker: II
-                time: 2:00-3:00 pm
-                description: Teachings on mandala offerings from The Torch of True Meaning
-            -
-                time: 3:00-3:30 pm
-                description: Tea Break
-            -
-                time: 3:30-4:30 pm
-                description: Accumulation of mandala offerings
-    -
-        title: Examination of Monastic Forms
-        date: February 12-14, 2016
-        time: 7:00-9:00 pm
-        location: Monlam Pavilion
-    -
-        title: "Virtue in the Middle: The Kagyu Monlam"
-        date: "February 16-22, 2016"
-        location: "Monlam Pavilion"
-        schedule:
-            -
-                heading: "Day 1: Tuesday, February 16"
-                marker: "I"
-                time: "6:00-8:30 am"
-                description: "Mahayana Sojong, Twenty-Branch Monlam"
-            -
-                marker: "II"
-                time: "9:00-10:30 am"
-                description: "Teachings on Mind Training: Potowa's Long Soliloquy"
+title: Attending the Kagyu Monlam
 ---
 
-## Schedule
+# Livestream
+To view recorded content from the Kagyu Monlam, please visit the [Karmapa channel](https://www.youtube.com/user/Karmapateachings) on YouTube.
 
-The 33rd Kagyu Monlam will be held during the first Tibetan month, the "Month of Miracles," of the Fire Monkey year, February 2016, in Bodhgaya, India. The Gyalwang Karmapa will teach the chapter on  mandala offerings from The Torch of True Meaning on February 12 and 13 as well as on the Kadampa master Potowa's Long Soliloquy during the actual Monlam. On February 14, there will be a ceremony to commemorate the Sixteenth Gyalwang Karmapa. The main Kagyu Monlam will be held for seven days from February 16 to 22. There will also be an Ocean of Kagyu Songs ganachakra offering for those who have completed one hundred thousand repetitions of all four special preliminaries. The Monlam will conclude with the Marme Monlam on February 23. For details, see the schedule below.
+# Attending in Person
+If you wish to attend the Monlam in person, please use this process:
+
+  1. [Register](/registration/) for the Monlam. 
+  1. Understand your [travel](/travel/) options to and from Bodhgaya.
+  1. Book your [accommodation](/attend/accommodation/)
+  1. Once you arrive in Bodhgaya, join us at the <a href="https://goo.gl/maps/hZsxsW1zqMJ2" target="_blank">Kagyu Monlam Pavilion</a> and seek further information once you arrive. 
+
+
+# Schedule
+
+* Jan 16, 2017&ndash;Feb 4, 2017 (20 days): Twentieth Kagyu Guncho 
+* Feb 7, 2017&ndash;Feb 8, 2017 (2 days): Grand Empowerment of the Five Deities of Chakrasamvara
+* Feb 9, 2017&ndash;Feb 11, 2017 (3 days): Teaching - Torch of True Meaning
+* Feb 13, 2017&ndash;Feb 19, 2017 (7 days): 34th Kagyu Monlam
+* Feb 21, 2017&ndash;Feb 25, 2017 (5 days): Garchen Gutor Puja
+* February 26, 2017: Smoke Offering "Clouds of Amrita"
+* Feb 27, 2017&ndash;Mar 1, 2017 (3 days): Garchen New Year’s Celebration
+* Mar 2, 2017: Marme Monlam
+* Mar 6, 2017&ndash;Mar 19, 2017 (14 days): 4th Arya Kshema Winter Dharma Gathering
+
+# Location
+[Kagyu Monlam Pavilion](https://goo.gl/maps/hZsxsW1zqMJ2)
+Bodhgaya, Bihar 824231, India
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.8950486522567!2d84.9847660149996!3d24.69613428413177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f32c5c00000001%3A0xc119a29a6ecbf2cf!2sKagyupa+International+Monlam+Trust!5e0!3m2!1sen!2sus!4v1477179165926" width="300" height="225" frameborder="0" style="border:0" allowfullscreen></iframe>
