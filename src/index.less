@@ -366,15 +366,17 @@ body,html,.row-offcanvas {
  * off Canvas sidebar
  * --------------------------------------------------
  */
+.row-offcanvas {
+  position: relative;
+  top: @navbarHeight;
+  height: calc(~"100% - " @navbarHeight);
+}
 @media screen and (max-width: 768px) {
   .row-offcanvas {
-    position: relative;
     -webkit-transition: all 0.25s ease-out;
     -moz-transition: all 0.25s ease-out;
     transition: all 0.25s ease-out;
     width: calc(~"100% + " @navSize);
-    height: calc(~"100% - " @navbarHeight);
-    top: @navbarHeight;
   }
 
   .row-offcanvas-left

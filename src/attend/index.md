@@ -10,7 +10,7 @@ To view recorded content from the Kagyu Monlam, please visit the [Karmapa channe
 If you wish to attend the Monlam in person, please use this process:
 
   1. [Register](/registration/) for the Monlam. 
-  1. Understand your [travel](/travel/) options to and from Bodhgaya.
+  1. Understand your [travel](/attend/travel/) options to and from Bodhgaya.
   1. Book your [accommodation](/attend/accommodation/)
   1. Once you arrive in Bodhgaya, join us at the <a href="https://goo.gl/maps/hZsxsW1zqMJ2" target="_blank">Kagyu Monlam Pavilion</a> and seek further information once you arrive. 
 
