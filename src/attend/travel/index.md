@@ -6,9 +6,9 @@ title: Travel to Bodhgaya
 
 ### Major Cities Nearby 
 
-Delhi – Bodhgaya ................. 1,008 km
-Gaya – Bodhgaya ................. 16 km
-Patna – Bodhgaya ................. 135 km
+Delhi – Bodhgaya ................. 1,008 km  
+Gaya – Bodhgaya ................. 16 km  
+Patna – Bodhgaya ................. 135 km  
 Varanasi – Bodhgaya ............ 252 km
 
 ### By Air

@@ -17,16 +17,16 @@
   children:
     -
       title: "Accommodation"
-      url: "/event/accommodation"
+      url: "/attend/accommodation"
     -
       title: "During the Monlam"
-      url: "/event/during"
+      url: "/attend/during"
     -
       title: "Livestream"
-      url: "/event/livestream"
+      url: "/attend/livestream"
     -
       title: "Travel to Bodhgaya"
-      url: "/event/travel"
+      url: "/attend/travel"
 -
   title: "Registration"
   url: "/registration"

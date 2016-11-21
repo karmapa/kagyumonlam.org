@@ -9,6 +9,7 @@ The annual Membership is $150.00 US
 Email to: members@kagyumonlam.org 
 
 <a target="_blank" href="http://www.milaguru.org/amember/signup.php" class="btn btn-primary btn-lg" role="button">New Member Sign-Up</a>
+
 <a target="_blank" href="http://www.milaguru.org/amember/member.php" class="btn btn-primary btn-lg" role="button">Member Log-in</a>
 
 Become a Friend of Kagyu Monlam, please E-mail members@kagyumonlam.org
