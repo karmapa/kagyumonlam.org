@@ -45,40 +45,34 @@
               <div class="col-md-12">
                 <h3>Sidebar (fixed)</h3>
                 <ul class="nav nav-pills nav-stacked">
-                  <li class="active"><a href="#">Section</a></li>
-                  <li><a href="#">Section</a></li>
-                  <li><a href="#">Section</a></li>
-                  <li><a href="#">Section</a></li>
-                  <li><a href="#">Section</a></li>
-                  <li><a href="#">Section</a></li>
-                  <li><a href="#">Section</a></li>
-                  <li><a href="#">Section</a></li>
-                  <li><a href="#">Section</a></li>
-                  <li><a href="#">Section</a></li>
+                    {% for n in navigation %}
+
+                        <li {% if n.url == path %}class="active"{% endif %}>
+                            <a href="{{n.url}}">{{n.title}}</a>
+                            {% if n.url == path %}
+                                <span class="sr-only">(current)</span>
+                            {% endif %}
+                        </li>
+
+                        {% if n.children %}
+                            {% for child in n.children %}
+                                <li class="child{% if child.url == path %} active{% endif %}">
+                                    <a href="{{child.url}}">{{child.title}}</a>
+                                    {% if child.url == path %}
+                                        <span class="sr-only">(current)</span>
+                                    {% endif %}
+                                </li>
+                            {% endfor %}
+                        {% endif %}
+
+                    {% endfor %}
                 </ul>
               </div>
           </div>
-          <div id="main">
-              <div class="col-md-12">
-                  <h2>Fixed + Fluid Bootstrap Template with Off-canvas Sidebar</h2>
-                  <div class="row">
-                      <div class="col-md-12"><div class="well"><p>Shrink the browser width to make the sidebar collapse off canvase.</p></div></div>
-                  </div>
-                  <div class="row">
-                      <div class="col-md-4"><div class="well"><p>4 cols</p></div></div>
-                      <div class="col-md-4"><div class="well"><p>4 cols</p></div></div>
-                      <div class="col-md-4"><div class="well"><p>4 cols</p></div></div>
-                  </div>
-                  <div class="row">
-                      <div class="col-lg-6 col-sm-6"><div class="well"><p>6 cols, 6 small cols</p></div></div>
-                      <div class="col-lg-6 col-sm-6"><div class="well"><p>6 cols, 6 small cols</p></div></div>
-                  </div>
-                  <div class="row">
-                      <div class="col-lg-4 col-sm-6"><div class="well">4 cols, 6 small cols</div></div>
-                      <div class="col-lg-4 col-sm-6"><div class="well">4 cols, 6 small cols</div></div>
-                      <div class="col-lg-4 col-sm-12"><div class="well">4 cols, 12 small cols</div></div>
-                  </div>
-              </div>
+          <div id="main" class="container-fluid">
+            {% block main %}
+                {{contents | safe}}
+            {% endblock %}
           </div>
         </div><!--/row-offcanvas -->
     </body>
