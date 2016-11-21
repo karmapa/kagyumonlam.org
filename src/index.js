@@ -17,7 +17,7 @@ window.jQuery = window.$ = $;
 require("bootstrap");
 
 // entry-point to our styles.
-require("./index.less");
+//require("../styles/index.less");
 
 
 

@@ -5,6 +5,7 @@ var metadata = require("metalsmith-metadata");
 var watch = require("metalsmith-watch");
 var serve = require("metalsmith-serve");
 var browserify = require("metalsmith-browserify");
+var less = require("metalsmith-less");
 
 var FeedParser = require("feedparser");
 var request = require("request");
@@ -131,7 +132,7 @@ var retrieveMonlamTagFeed = function (retrieveOrParserDone) {
 
 
 var builder = Metalsmith(__dirname)
-  .ignore(["*.js", "*.less", "*.swp"])
+  .ignore(["*.js", "*.swp"])
   .use(metadata({
     navigation: "navigation.yaml"
   }))
@@ -147,12 +148,22 @@ var builder = Metalsmith(__dirname)
     }
   }));
 
+builder.use(less({
+  pattern: "styles/index.less",
+  // options for less compiler
+  render: {
+    paths: "src/styles/"
+  },
+  useDynamicSourceMap: true
+}));
+
 if (process.argv.length > 2 && process.argv[2] == "watch") {
   // watch files for changes
   builder.use(watch({
     paths: {
       "${source}/**/*": true,
-      "layouts/**/*": "**/*.md"
+      "layouts/**/*": "**/*.md",
+      "styles/**/*": "**/*.less"
     },
     livereload: true
   }));
