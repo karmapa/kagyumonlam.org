@@ -170,7 +170,8 @@ if (process.argv.length > 2 && process.argv[2] == "watch") {
       //"${source}/**/*": true,
       "layouts/**/*": "**/*.md",
       "${source}/styles/**/*": "**/*.less",
-      "${source}/**/*.md": true
+      "${source}/**/*.md": true,
+      "${source}/index.js": true
     },
     livereload: true
   }));
