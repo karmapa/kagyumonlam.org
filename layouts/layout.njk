@@ -67,7 +67,7 @@
                 <ul class="nav nav-pills nav-stacked">
                     {% for n in navigation %}
 
-                        <li {% if n.url == path %}class="active"{% endif %}>
+                        <li class="{% if n.url == path %}active{% endif %} {% if n.children %}parent{% endif %}">
                             <a href="{{n.url}}">{{n.title}}</a>
                             {% if n.url == path %}
                                 <span class="sr-only">(current)</span>
