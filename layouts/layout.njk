@@ -69,8 +69,8 @@
         <div class="row-offcanvas row-offcanvas-left">
           <div id="sidebar" class="sidebar-offcanvas">
               <div class="col-md-12">
-                <h3>Sidebar (fixed)</h3>
-                <ul class="nav nav-pills nav-stacked">
+                <h3>Navigation</h3>
+                <ul class="nav">
                     {% for n in navigation %}
 
                         <li class="{% if n.url == path %}active{% endif %} {% if n.children %}parent{% endif %}">

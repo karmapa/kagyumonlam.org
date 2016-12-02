@@ -23,7 +23,7 @@ If you wish to attend the Monlam in person, please use this process:
 * Feb 13, 2017&ndash;Feb 19, 2017 (7 days): 34th Kagyu Monlam
 * Feb 21, 2017&ndash;Feb 25, 2017 (5 days): Garchen Gutor Puja
 * February 26, 2017: Smoke Offering "Clouds of Amrita"
-* Feb 27, 2017&ndash;Mar 1, 2017 (3 days): Garchen New Year’s Celebration
+* Feb 27, 2017&ndash;Mar 1, 2017 (3 days): Garchen New Year's Celebration
 * Mar 2, 2017: Marme Monlam
 * Mar 6, 2017&ndash;Mar 19, 2017 (14 days): 4th Arya Kshema Winter Dharma Gathering
 

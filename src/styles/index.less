@@ -1,6 +1,6 @@
 @import "node_modules/bootstrap/less/bootstrap.less";
 @import "node_modules/lesshat/build/lesshat-prefixed.less";
-
+@import "navigation.less";
 @import "fonts.less";
 @import "home.less";
 @import "header.less";
@@ -9,8 +9,8 @@
 
 
 /* Colors */
-@headingsAccentColor: #243FAA; // blue
-@textColor: #666666;
+@headingsAccentColor: #8B1A1A; // maroon
+@textColor: #171717;
 @brand-primary: @headingsAccentColor;
 
 /*@navbar-default-toggle-border-color: black;*/
@@ -133,8 +133,8 @@ a.navbar-brand {
   
 }
 
-main {
-  background-color: rgba(255, 255, 255, 0.9);
+#main {
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 /*@navbarHeight: 165px;*/
@@ -315,3 +315,8 @@ body,html,.row-offcanvas {
     top: 0;
   }
 }
+
+img.content {
+  border:3px solid gray;
+  margin:8px;
+  }
