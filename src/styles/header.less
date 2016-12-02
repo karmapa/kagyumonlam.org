@@ -1,0 +1,40 @@
+@topPhotoHeight: 256px;
+@logoHeight: 100px;
+@navbarHeight: @topPhotoHeight + @logoHeight;
+@leftMargin: 1.25em;
+@headerTextColor: white;
+.navbar {
+  margin-bottom: 0;
+  height: @navbarHeight;
+  background-color: transparent;
+  border: none;
+}
+.navbar-header {
+  background-image: url('http://thecatapi.com/api/images/get?format=src');
+
+  height: @topPhotoHeight;
+
+  button.navbar-toggle {
+    float: left;
+    margin-left: @leftMargin;
+    border: 0;
+    .icon-bar {
+      background-color: @headerTextColor;
+    }
+  }
+
+  position: relative;
+
+  div.heading-info {
+    color: @headerTextColor;
+    position: absolute;
+    bottom: 0;
+    margin-left: @leftMargin;
+  }
+
+  a.navbar-brand {
+    
+  }
+
+  border-bottom: 4px solid @headingsAccentColor;
+}
