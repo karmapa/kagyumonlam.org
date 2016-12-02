@@ -3,19 +3,22 @@ layout: index.njk
 title: Kagyu Monlam Chenmo
 event_date: February 12-23, 2016
 event_location: Bodhgaya, India
-highlights:
+quick_navigation_items:
     -
-        guid: http://kagyuoffice.org/?p=7119
+        title: About
+        subtitle: What about it?
+        thumbnail_img_src: "http://thecatapi.com/api/images/get?format=src&uuid=12345"
+        href: /about
     -
-        guid: http://kagyuoffice.org/?p=7144
+        title: Attend
+        subtitle: Hello
+        thumbnail_img_src: "http://thecatapi.com/api/images/get?format=src&uuid=1234"
+        href: /attend
     -
-        guid: http://kagyuoffice.org/?p=8148
-    -
-        guid: http://kagyuoffice.org/?p=8125
-    -
-        guid: http://kagyuoffice.org/?p=8170
-    -
-        guid: http://kagyuoffice.org/?p=8163
+        title: Support
+        subtitle: Donate or purchase membership
+        thumbnail_img_src: "http://thecatapi.com/api/images/get?format=src&uuid=123"
+        href: /support
 
 ---
 

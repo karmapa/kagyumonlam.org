@@ -1,141 +1,19 @@
 {% extends "./layout.njk" %}
 
 {% block main %}
-
-<section class="row">
-  <div class="col-xs-12">
-    <div class="row">
-
-      <div id="highlights-carousel" class="carousel slide right" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          {% for highlight in highlights %}
-            {% if loop.first %}
-              <li data-target="#highlights-carousel" data-slide-to="{{loop.index0}}" class="active"></li>
-            {% else %}
-              <li data-target="#highlights-carousel" data-slide-to="{{loop.index0}}"></li>
-            {% endif %}
-          {% endfor %}
-        </ol>
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-          {% for highlight in highlights %}
-            {% if loop.first %}
-              <div class="item active col-xs-8 col-xs-offset-2">
-            {% else %}
-              <div class="item col-xs-8 col-xs-offset-2">
-            {% endif %}
-                <div class="row">
-                  <div class="col-xs-6">
-                    <a href="{{retrievedPosts.byguid[highlight.guid]['rss:link']['#']}}"><img alt="{{retrievedPosts.byguid[highlight.guid].title}}" src="{{retrievedPosts.byguid[highlight.guid].img.src}}" class="carousel-image" style="width: 100%; max-width: 100%;"/></a>
-                  </div>
-                  <div class="col-xs-6">
-                    <h4><a href="{{retrievedPosts.byguid[highlight.guid]['rss:link']['#']}}">{{retrievedPosts.byguid[highlight.guid].title}}</a></h4>
-                  </div>
-                </div>
+    {% for item in quick_navigation_items %}
+        <div class="row">
+            <div class="col-xs-12 quick_navigation_box">
+                <a class="row" href="{{item.href}}">
+                    <figure class="col-xs-3">
+                        <img src="{{item.thumbnail_img_src}}" />
+                    </figure>
+                    <span class="col-xs-9">
+                        <h2>{{item.title}}</h2>
+                        <p>{{item.subtitle}}</p>
+                    </span>
+                </a>
             </div>
-          {% endfor %}
         </div>
-
-        <!-- Controls -->
-        <a class="left carousel-control" href="#highlights-carousel" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#highlights-carousel" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-
-    </div>
-  </div>
-
-</section>
-
-<section class="row">
-  <div class="col-xs-12">
-    <h2>
-      <span class="h2thin">Monlam</span><span class="h2thick">Highlights</span>
-    </h2>
-  </div>
-
-  <div class="col-xs-12">
-    <div class="row">
-      
-      {% for highlight in highlights %}
-        <div class="col-xs-12 col-sm-4 col-md-3" style="height: 135px; overflow: hidden; margin-bottom: 1em;">
-          <a href="{{highlight.guid}}">
-            <img alt="{{retrievedPosts.byguid[highlight.guid].title}}" src="{{retrievedPosts.byguid[highlight.guid].img.src}}" style="height: 100%; width: 100%; max-width: 230px; "/>
-          </a>
-        </div>
-      {% endfor %}
-
-    </div>
-  </div>
-
-</section>
-
-<section class="row">
-  <div class="col-xs-12">
-    <h2>
-      <span class="h2thin">Monlam</span><span class="h2thick">News</span>
-    </h2>
-  </div>
-
-  <div class="col-xs-12">
-    <div class="row">
-
-      <div id="news-carousel" class="carousel slide left" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          {% for post in retrievedPosts.all %}
-            {% if loop.first %}
-              <li data-target="#news-carousel" data-slide-to="{{loop.index0}}" class="active"></li>
-            {% else %}
-              <li data-target="#news-carousel" data-slide-to="{{loop.index0}}"></li>
-            {% endif %}
-          {% endfor %}
-        </ol>
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-          {% for post in retrievedPosts.all %}
-            {% if loop.first %}
-              <div class="item active col-xs-8 col-xs-offset-2">
-            {% else %}
-              <div class="item col-xs-8 col-xs-offset-2">
-            {% endif %}
-                <div class="row">
-                  <div class="col-xs-6">
-                    <h4><a href="{{post['rss:link']['#']}}">{{post.title}}</a></h4>
-                  </div>
-                  <div class="col-xs-6">
-                    <a href="{{post['rss:link']['#']}}"><img alt="{{post.title}}" src="{{post.img.src}}" class="carousel-image" style="width: 100%; max-width: 100%;"/></a>
-                  </div>
-                </div>
-            </div>
-          {% endfor %}
-        </div>
-
-        <!-- Controls -->
-        <a class="left carousel-control" href="#news-carousel" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#news-carousel" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-
-    </div>
-  </div>
-
-</section>
-
-<section class="row divider">
-
-</section>
+    {% endfor %}
 {% endblock %}
