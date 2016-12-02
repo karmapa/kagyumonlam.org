@@ -167,9 +167,10 @@ if (process.argv.length > 2 && process.argv[2] == "watch") {
   // watch files for changes
   builder.use(watch({
     paths: {
-      "${source}/**/*": true,
+      //"${source}/**/*": true,
       "layouts/**/*": "**/*.md",
-      "${source}/styles/**/*": "**/*.less"
+      "${source}/styles/**/*": "**/*.less",
+      "${source}/**/*.md": true
     },
     livereload: true
   }));
