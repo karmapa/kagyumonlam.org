@@ -157,13 +157,19 @@ builder.use(less({
   useDynamicSourceMap: true
 }));
 
+
+builder.use(browserify('build.js', [
+  'src/index.js'
+]));
+
+
 if (process.argv.length > 2 && process.argv[2] == "watch") {
   // watch files for changes
   builder.use(watch({
     paths: {
       "${source}/**/*": true,
       "layouts/**/*": "**/*.md",
-      "styles/**/*": "**/*.less"
+      "${source}/styles/**/*": "**/*.less"
     },
     livereload: true
   }));
@@ -171,27 +177,31 @@ if (process.argv.length > 2 && process.argv[2] == "watch") {
   builder.use(serve());
 };
 
+//console.log("Retrieving monlam feed...");
+//retrieveMonlamTagFeed(function (err) {
 
-builder.use(browserify('build.js', [
-  'src/index.js'
-]));
+  //if (err) {
+    //console.log(err.stack);
+    //throw err;
+  //} else {
+    //console.log("Building site...");
+    //builder.build(function (err) {
+      //if (err) {
+        //console.log(err.stack);
+        //throw err;
+      //} else {
+        //console.log("Build complete!");
+      //}
+    //});
+  //}
+//});
 
-console.log("Retrieving monlam feed...");
-retrieveMonlamTagFeed(function (err) {
-
+console.log("Building site...");
+builder.build(function (err) {
   if (err) {
     console.log(err.stack);
     throw err;
   } else {
-    console.log("Building site...");
-    builder.build(function (err) {
-      if (err) {
-        console.log(err.stack);
-        throw err;
-      } else {
-        console.log("Build complete!");
-      }
-    });
+    console.log("Build complete!");
   }
 });
-
