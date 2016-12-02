@@ -43,7 +43,12 @@
 
 
 body {
-  font-family: 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 14px;
+    line-height: normal;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
   color: @textColor;
   font-size: 16px;
 }
@@ -55,9 +60,6 @@ p.subtitle {
   font-size: 0.8em;
 }
 
-h1, p.subtitle {
-  font-family: 'PT Serif', serif;
-}
 h1 {
   font-weight: 700;
 }
@@ -66,19 +68,19 @@ p.subtitle {
   font-weight: 400;
 }
 h2 {
-
-  span.h2thin {
-    font-family: 'montserratlight', 'Montserrat', sans-serif;
-  }
-
-  span.h2thick {
-    font-family: 'montserratblack', 'Montserrat', sans-serif;
-    letter-spacing: 0.05em;
-  }
-
   margin-bottom: 0.2em;
 }
+
+h1, h2, h3, h4 {
+    font-style: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    text-transform: none;
+}
+
 h1, h2, p.subtitle, ul.nav li a {
-  text-transform: uppercase;
+  text-transform: none;
   color: @headingsAccentColor;
+  
 }
