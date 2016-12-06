@@ -6,18 +6,18 @@ event_location: Bodhgaya, India
 quick_navigation_items:
     -
         title: About
-        subtitle: What about it?
-        thumbnail_img_src: "http://thecatapi.com/api/images/get?format=src&uuid=12345"
+        subtitle: Learn about the history of the Kagyu Monlam, and His Holiness the 17th Gyalwang Karmapa, Orgyen Trinley Dorje.
+        thumbnail_img_src: "../media/images/torma.jpg"
         href: /about
     -
         title: Attend
-        subtitle: Hello
-        thumbnail_img_src: "http://thecatapi.com/api/images/get?format=src&uuid=1234"
+        subtitle: Find details about attending the next Kagyu Monlam, February 13-19, in Bodhgaya, India.
+        thumbnail_img_src: "../media/images/sangha.jpg"
         href: /attend
     -
         title: Support
-        subtitle: Donate or purchase membership
-        thumbnail_img_src: "http://thecatapi.com/api/images/get?format=src&uuid=123"
+        subtitle: Provide financial or volunteer support for the next Kagyu Monlam.
+        thumbnail_img_src: "../media/images/workers.jpg"
         href: /support
 
 ---

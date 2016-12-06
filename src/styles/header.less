@@ -10,7 +10,7 @@
   border: none;
 }
 .navbar-header {
-  background-image: url('http://thecatapi.com/api/images/get?format=src');
+  background-image: url('../media/images/karmapa_17_04.jpg');
 
   height: @topPhotoHeight;
 
@@ -25,16 +25,18 @@
 
   position: relative;
 
-  div.heading-info {
-    color: @headerTextColor;
-    position: absolute;
-    bottom: 0;
-    margin-left: @leftMargin;
-  }
-
   a.navbar-brand {
-    
+    display: block;
+    position: absolute;
+    bottom: 2em;
+    margin-left: @leftMargin;
+    height: 2em; // TODO: this is wrong
   }
 
   border-bottom: 4px solid @headingsAccentColor;
 }
+div.heading-info {
+  color: @headerTextColor;
+  margin-left: @leftMargin;
+}
+
