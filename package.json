@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -Rf build/*",
     "build": "node index.js",
-    "watch": "node index.js watch"
+    "watch": "NODE_ENV=development node index.js"
   },
   "browserify": {},
   "author": "Colin Sullivan <colin [at] colin-sullivan.net>",

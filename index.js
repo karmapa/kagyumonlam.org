@@ -130,13 +130,22 @@ var retrieveMonlamTagFeed = function (retrieveOrParserDone) {
 };
 
 
+var addEnvironmentVariables = function(files, metalsmith, done) {
+  for (var filePath in files) {
+    files[filePath].NODE_ENV = process.env.NODE_ENV;
+  }
+  done();
+};
+
+
 
 var builder = Metalsmith(__dirname)
   .ignore(["*.js", "*.swp"])
   .use(metadata({
-    navigation: "navigation.yaml"
+    navigation: "navigation.yaml",
   }))
   .use(markdown())
+  .use(addEnvironmentVariables)
   .use(addPath)
   .use(addCurrentNav)
   .use(addRetrievedPosts)
@@ -162,8 +171,7 @@ builder.use(browserify('build.js', [
   'src/index.js'
 ]));
 
-
-if (process.argv.length > 2 && process.argv[2] == "watch") {
+if (process.env.NODE_ENV && process.env.NODE_ENV == "development") {
   // watch files for changes
   builder.use(watch({
     paths: {
