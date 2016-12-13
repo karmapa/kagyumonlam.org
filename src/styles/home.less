@@ -13,8 +13,28 @@ div.quick_navigation_box {
     margin-right: 1em;
     figure {
       img {
+        /* Extra small devices (phones, less than 768px) */
+        /* No media query since this is the default in Bootstrap */
+
         width: 100%;
+
+        /* Small devices (tablets, 768px and up) */
+        @media (min-width: @screen-sm-min) {
+          /*width: 128px;*/
+        }
+
+        /* Medium devices (desktops, 992px and up) */
+        @media (min-width: @screen-md-min) {
+          /*width: 128px;*/
+        }
+
+        /* Large devices (large desktops, 1200px and up) */
+        @media (min-width: @screen-lg-min) {
+          /*width: 128px;*/
+        }
       }
+
+      padding-right: 0;
     }
     span {
       h2 {
