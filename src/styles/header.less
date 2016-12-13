@@ -8,16 +8,41 @@
   height: @navbarHeight;
   background-color: transparent;
   border: none;
-}
-.navbar-header {
-  background-image: url('../media/images/karmapa_17_04.jpg');
 
+  .container-fluid {
+    padding: 0;
+  }
+
+}
+
+.container-fluid > .navbar-header {
+  margin: 0;
+}
+
+div.row.headerimage { 
   height: @topPhotoHeight;
+}
+div.row.logo {
+  height: @logoHeight;
+  padding-top: 24px;
+}
+
+.navbar-header {
+  background-image: url('../media/images/karmapa_17_04_flipped.jpg');
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-color: #070707;
+
+  height: 100%;
+  width: 100%;
+
+  padding-top: 1em;
 
   button.navbar-toggle {
     float: left;
     margin-left: @leftMargin;
     border: 0;
+    padding: 0;
     .icon-bar {
       background-color: @headerTextColor;
     }
@@ -25,18 +50,84 @@
 
   position: relative;
 
-  a.navbar-brand {
-    display: block;
-    position: absolute;
-    bottom: 2em;
-    margin-left: @leftMargin;
-    height: 2em; // TODO: this is wrong
-  }
-
   border-bottom: 4px solid @headingsAccentColor;
 }
 div.heading-info {
   color: @headerTextColor;
   margin-left: @leftMargin;
+  font-weight: bold;
+  position: absolute;
+  bottom: 1em;
+}
+
+a.header_logo {
+  display: block;
+  div.monlamSwish, div.title_and_subtitle {
+    display: inline-block;
+  }
+
+
+  // tighten up positioning between title and icon
+  div.title_and_subtitle {
+    position: relative;
+    left: -1.25em;
+    top: 0.25em;
+    
+    h1 {
+      margin: 0;
+    }
+  }
+
+
+  // swish icon
+  div.monlamSwish {
+    width: 4em;
+
+    svg {
+      fill: @headingsAccentColor;
+    }
+  }
+
+
+  /* Extra small devices (phones, less than 768px) */
+  /* No media query since this is the default in Bootstrap */
+
+  /*text-align: center;*/
+  /*float: none;*/
+  /*margin: auto;*/
+
+  /* Small devices (tablets, 768px and up) */
+  /*@media (min-width: @screen-sm-min) {*/
+
+    /*text-align: left;*/
+
+    /*.monlamSwish {*/
+      /*width: 175px;*/
+    /*}*/
+
+    /*h1 {*/
+      /*position: relative;*/
+      /*top: -40px;*/
+      /*left: -60px;*/
+    /*}*/
+
+    /*div.subtitle {*/
+      /*position: relative;*/
+      /*top: -40px;*/
+      /*left: 120px;*/
+    /*}*/
+  /*}*/
+
+  /* Medium devices (desktops, 992px and up) */
+  @media (min-width: @screen-md-min) {
+
+  }
+
+  /* Large devices (large desktops, 1200px and up) */
+  @media (min-width: @screen-lg-min) {
+
+  }
+
+  
 }
 
