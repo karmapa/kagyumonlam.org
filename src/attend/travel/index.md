@@ -62,7 +62,7 @@ Railways](http://www.indianrail.gov.in) and various travel agencies.
 * Train tickets for most lines are sold in several different categories: A/C First Class, A/C Sleeper in two- or three-tier, A/C Chair Car, 2nd Class (non A/C) in two- or three-tier. Because these categories can be confusing, it is best to consult a travel agent or tourist service center before purchasing one.
 * Timetables (Trains at a Glance) can be hard to read or understand. It's therefore easier to buy a train ticket through a travel agent or tourist service center.
 * Safety around train stations. Areas surrounding railway stations, and crowded areas in general, are notoriously high risk areas full of pickpockets and thieves. Plan ahead to avoid both pushing or being pushed through a crowded area and searching through your bags for tickets or visas or cash. Never open a bag of any kind in public. Keep whatever you need handy, like a small amount of cash and your ticket, in a secure inside pocket.
-* Do not expose any valuables or cash at any time. Whenever possible use the waiting room for First Class and A/C Sleeper passengers. Pay special attention when getting in and out of trains—or any other transport. Bodhgaya is located in Bihar State which is especially infamous for dacoits (bandits) and crime.
+* Do not expose any valuables or cash at any time. Whenever possible use the waiting room for First Class and A/C Sleeper passengers. Pay special attention when getting in and out of trains or any other transport. Bodhgaya is located in Bihar State which is especially infamous for dacoits (bandits) and crime.
 * Security on trains. First Class A/C compartments are the only place that are normally quite safe. None of the others are. Do not leave anything of value close to open train windows, doors and walkways. Never leave anything on your seat if you vacate it even for a moment to use a toilet or stretch your legs. Tightly lock up and chain your luggage to a seat for security if you plan to sleep. Do not accept food or drink from anyone including casual acquaintances on trains. Have your own snacks with you, somewhere easy to reach without exposing your valuables, visa or cash.
 
 ([top](#1))
@@ -101,11 +101,11 @@ To protect your health and ensure a positive experience, please observe these gu
 
 # <a name="7"></a>Safety
 
-* In tourist areas, thieves and pickpockets mix in with the crowd of beggars. Keep your bags close to your body at all times. Avoid crowds or be extra careful when in the midst of crowds.
+* In tourist areas, thieves and pickpockets mix in with the crowd of beggars. Keep your bags close to your body at all times. Avoid crowds and be extra careful when in the midst of crowds.
 
-* When taking a taxi or rickshaw, negotiate and agree on a price, location of drop-off and pick-up, etc., before setting off to avoid conflicts later on. Be sure that the driver knows where you want to go. 
+* Before entering a taxi or rickshaw, negotiate and agree on a price, location of drop-off and pick-up, etc., to avoid conflicts later on. Be sure that the driver understands where you want to go and do not ride if you have any concerns. 
 
-* Bargaining is a fact of life when shopping in India. If you have no intention to buy, do NOT enter into a serious bargaining for fun especially in Bodhgaya.
+* Bargaining is a fact of life when shopping in India. If you have no intention to buy, do NOT enter into a serious bargaining for fun, especially in Bodhgaya.
 
 * Take measures against theft. Do not assume hotel rooms are safe. Inquire if the hotel can keep your passport, traveler's checks and valuables safely and if it guarantees secure storage. Make copies of your passport and Indian visa and a list of travelers' check numbers, Leave one set with friends or keep it separate from the originals. Lock your hotel room securely whenever you leave, put on the extra security chain before you go to sleep.
 
@@ -121,7 +121,10 @@ You must have an FM radio with earphones to get a translation of the talks, ritu
 
 This is a sacred occasion attended by many monks and nuns, so plan to observe a dress code which maintains modesty. Loose fitting clothes work best for comfort and decency.
 
-Bring a pair of shoes/sandals that are easy to slide off because you will be asked to remove your shoes on many occasions.
+Bring a pair of shoes/sandals that are easy to slide off because you will be asked to remove your shoes on many occasions. Slippers with a plastic sole are good to have, as the ground gets wet in the early morning. Also please bring a shoe bag to carry your shoes with you, both at the Monlam Pavilion and the Mahabodhi Stupa. 
+
+
+
 
 ([top](#1))
 
@@ -141,7 +144,7 @@ Bring a pair of shoes/sandals that are easy to slide off because you will be ask
 
 # <a name="10"></a>Other Useful Tips:
 
-* India has only one time zone and does not adopt daylight saving time (DST). It is 13 hours and 30 minutes ahead of the Pacific Time of North America during non-DST period, or 12 hours 30 minutes during DST period. It is 2 hours and 30 minutes behind Taiwan, Hong Kong, and China.
+* India has only one time zone and does not adopt daylight savings time. It is 13 hours and 30 minutes ahead of the Pacific Time of North America during non-DST period, or 12 hours 30 minutes during DST period. It is 2 hours and 30 minutes behind Taiwan, Hong Kong, and China.
 * Electricity is 220-240 volts AC, and unstable in most areas. India uses 2- or 3-round-pin plugs but socket sizes vary and may not be always available at hotels. You may want to bring a universal adaptor and/or transformers.
 * Reception of cell/mobile phones is not stable, but there are many STD/ISD phone booths to make international calls at low rates. 
 * Mobile networks do not always have good data connectivity, and even hotel wifi can be spotty. Do not count on being able to access the internet from your phone or smart device. Please print and securely store any important documents (such as travel documents, insurance and medical information, copies of your passport, etc.) 

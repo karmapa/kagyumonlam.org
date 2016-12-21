@@ -1,6 +1,6 @@
 ---
 layout: registration.njk
-title: Registration
+title: Support the Kagyu Monlam
 ---
 
 Friends of Kagyu Monlam Membership
@@ -8,11 +8,11 @@ Friends of Kagyu Monlam Membership
 The annual Membership is $150.00 US 
 Email to: members@kagyumonlam.org 
 
-<a target="_blank" href="http://www.milaguru.org/amember/signup.php" class="btn btn-primary btn-lg" role="button">New Member Sign-Up</a>
+<a target="_blank" href="http://www.milaguru.org/amember/signup.php" class="btn btn-primary btn-lg" role="button">Become a Friend of the Kagyu Monlam</a>
 
-<a target="_blank" href="http://www.milaguru.org/amember/member.php" class="btn btn-primary btn-lg" role="button">Member Log-in</a>
+<a target="_blank" href="http://www.milaguru.org/amember/member.php" class="btn btn-primary btn-lg" role="button">Friend of the Kagyu Monlam Log-in</a>
 
-Become a Friend of Kagyu Monlam, please E-mail members@kagyumonlam.org
+If you have questions about becoming a Friend of Kagyu Monlam, please E-mail [members@kagyumonlam.org](members@kagyumonlam.org).
 
 Any questions, suggestions related to web content, please E-mail webcontent@kagyumonlam.org
 
