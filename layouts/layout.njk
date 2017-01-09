@@ -26,10 +26,13 @@
 
         {% if NODE_ENV == "development" %}
             <script src="http://localhost:35729/livereload.js"></script>
+            <link rel="stylesheet" href="/styles/index.css">
+            <script src="/build.js"></script>
+        {% else %}
+            <link rel="stylesheet" href="/{{ fingerprint['styles/index.css'] }}">
+            <script src="/{{ fingerprint['build.js']}}"></script>
         {% endif %}
 
-        <link rel="stylesheet" href="/styles/index.css">
-        <script src="/build.js"></script>
 
     </head>
     <body>

@@ -6,6 +6,7 @@ var watch = require("metalsmith-watch");
 var serve = require("metalsmith-serve");
 var browserify = require("metalsmith-browserify");
 var less = require("metalsmith-less");
+var fingerprint = require("metalsmith-fingerprint");
 
 var FeedParser = require("feedparser");
 var request = require("request");
@@ -149,6 +150,23 @@ var builder = Metalsmith(__dirname)
   .use(addPath)
   .use(addCurrentNav)
   .use(addRetrievedPosts)
+  .use(less({
+    pattern: "styles/index.less",
+    // options for less compiler
+    render: {
+      paths: "src/styles/"
+    },
+    useDynamicSourceMap: true
+  }))
+  .use(browserify('build.js', [
+    'src/index.js'
+  ]))
+  .use(fingerprint({
+    pattern: 'styles/index.css'
+  }))
+  .use(fingerprint({
+    pattern: 'build.js'
+  }))
   .use(layouts({
     engine: "nunjucks",
     directory: "layouts",
@@ -156,20 +174,6 @@ var builder = Metalsmith(__dirname)
       views: 'layouts'
     }
   }));
-
-builder.use(less({
-  pattern: "styles/index.less",
-  // options for less compiler
-  render: {
-    paths: "src/styles/"
-  },
-  useDynamicSourceMap: true
-}));
-
-
-builder.use(browserify('build.js', [
-  'src/index.js'
-]));
 
 if (process.env.NODE_ENV && process.env.NODE_ENV == "development") {
   // watch files for changes
