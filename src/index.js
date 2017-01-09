@@ -21,9 +21,31 @@ require("bootstrap");
 
 
 
+
 $(document).ready(function () {
-  console.log("Hello!");
-	$('[data-toggle=offcanvas]').click(function() {
-		$('.row-offcanvas').toggleClass('active');
-	});
+
+  var navigationElement = $('.row-offcanvas');
+
+  var toggle_navigation = function (e) {
+		navigationElement.toggleClass('active');
+    e.stopPropagation();
+  };
+
+  var close_navigation_if_open = function (e) {
+    if (navigationElement.hasClass('active')) {
+      return toggle_navigation(e);
+    }
+  };
+
+  // open navigation when button is clicked
+	$('[data-toggle=offcanvas]').click(toggle_navigation);
+
+  // close navigation when button is clicked
+  $('button.navigation-close').click(toggle_navigation);
+
+  // if header or body is clicked, close navigation
+  $('div.navbar').click(close_navigation_if_open);
+  $('div#main').click(close_navigation_if_open);
+
+  
 });

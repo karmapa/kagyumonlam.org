@@ -17,8 +17,8 @@
 /*}*/
 
 a.navbar-brand {
-  height: inherit;
-  padding: 0;
+  /*height: inherit;*/
+  /*padding: 0;*/
   /*width: 100%;*/
   /*padding-bottom: 1.2em;*/
   }
@@ -77,7 +77,54 @@ a.navbar-brand {
     font-size: 16px;
     line-height: normal;
     font-family: "Source Sans Pro", Helvetica, sans-serif;
+
+
+  button.navigation-close {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 1000;
+  }
 }
+/*#main {*/
+  /*height:100%;*/
+  /*overflow-y:auto;*/
+/*}*/
+
+/*
+ * off Canvas sidebar
+ * --------------------------------------------------
+ */
+.row-offcanvas {
+  position: absolute;
+  top: 0;
+  /*top: @navbarHeight;*/
+  /*height: calc(~"100% - " @navbarHeight);*/
+  height: 100%;
+}
+@media screen and (max-width: 768px) {
+  .row-offcanvas {
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+    /*width: calc(~"100% + " @navSize);*/
+  }
+
+  .row-offcanvas-left
+  {
+    left: -@navSize;
+  }
+
+  .row-offcanvas-left.active {
+    left: 0;
+  }
+
+  .sidebar-offcanvas {
+    /*position: absolute;*/
+    /*top: 0;*/
+  }
+}
+
 
 
 .nav li {
