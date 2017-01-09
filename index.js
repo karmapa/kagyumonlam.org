@@ -184,7 +184,9 @@ if (process.env.NODE_ENV && process.env.NODE_ENV == "development") {
     livereload: true
   }));
 
-  builder.use(serve());
+  builder.use(serve({
+    host: "0.0.0.0"
+  }));
 };
 
 //console.log("Retrieving monlam feed...");

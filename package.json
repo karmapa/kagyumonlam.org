@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -Rf build/*",
     "build": "node index.js",
-    "watch": "NODE_ENV=development node index.js"
+    "watch": "NODE_ENV=development node index.js",
+    "deploy": "rsync -av --delete --exclude='*.swp' build/ colinsul@kagyumonlam.colin-sullivan.net:kagyumonlam.colin-sullivan.net/"
   },
   "browserify": {},
   "author": "Colin Sullivan <colin [at] colin-sullivan.net>",

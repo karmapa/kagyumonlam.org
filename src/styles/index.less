@@ -21,7 +21,7 @@
 
 
 body {
-  background-image: url('/media/flags_background_1680.png');
+  background-image: url('/media/flags_background_1680.jpg');
 }
 
 
@@ -191,8 +191,8 @@ body,html,.row-offcanvas {
   max-width: @navSize;
   background-color:#f5f5f5;
   float: left;
-  height:100%;
-  position:relative;
+  /*height:100%;*/
+  /*position:relative;*/
   overflow-y:auto;
   overflow-x:hidden;
 }
@@ -207,8 +207,9 @@ body,html,.row-offcanvas {
  */
 .row-offcanvas {
   position: relative;
-  top: @navbarHeight;
-  height: calc(~"100% - " @navbarHeight);
+  /*top: @navbarHeight;*/
+  /*height: calc(~"100% - " @navbarHeight);*/
+  height: 100%;
 }
 @media screen and (max-width: 768px) {
   .row-offcanvas {
@@ -228,8 +229,8 @@ body,html,.row-offcanvas {
   }
 
   .sidebar-offcanvas {
-    position: absolute;
-    top: 0;
+    /*position: absolute;*/
+    /*top: 0;*/
   }
 }
 

@@ -1,11 +1,11 @@
-@topPhotoHeight: 256px;
+/*@topPhotoHeight: 0;*/
 @logoHeight: 100px;
-@navbarHeight: @topPhotoHeight + @logoHeight;
-@leftMargin: 1.25em;
+@navbarHeight: @logoHeight;
+/*@leftMargin: 1.25em;*/
 @headerTextColor: white;
 .navbar {
   margin-bottom: 0;
-  height: @navbarHeight;
+  /*height: @navbarHeight;*/
   background-color: transparent;
   border: none;
 
@@ -15,53 +15,53 @@
 
 }
 
-.container-fluid > .navbar-header {
+/*.container-fluid > .navbar-header {*/
+  /*margin: 0;*/
+/*}*/
+
+/*div.row.headerimage { */
+  /*height: @topPhotoHeight;*/
+/*}*/
+/*div.row.logo {*/
+  /*height: @logoHeight;*/
+  /*padding-top: 20px;*/
+/*}*/
+
+button.navbar-toggle {
+  float: left;
+  /*margin-left: @leftMargin;*/
   margin: 0;
+  /*border: 0;*/
+  /*padding: 0;*/
+  .icon-bar {
+    background-color: @headerTextColor;
+  }
 }
-
-div.row.headerimage { 
-  height: @topPhotoHeight;
+.navbar {
+  border-bottom: 4px solid @headingsAccentColor;
+  
 }
-div.row.logo {
-  height: @logoHeight;
-  padding-top: 20px;
-}
-
 .navbar-header {
-  background-image: url('../media/images/karmapa_17_04.jpg');
-  background-repeat: no-repeat;
-  background-position: left top;
-  background-color: #070707;
+  /*background-image: url('../media/images/karmapa_17_04.jpg');*/
+  /*background-repeat: no-repeat;*/
+  /*background-position: left top;*/
+  /*background-color: transparent;*/
 
-  height: 100%;
-  width: 100%;
+  /*height: 100%;*/
+  /*width: 100%;*/
+
+  /*padding-top: 1em;*/
+
+
+  /*position: relative;*/
 
   padding-top: 1em;
+  padding-bottom: 1em;
 
-  button.navbar-toggle {
-    float: left;
-    margin-left: @leftMargin;
-    border: 0;
-    padding: 0;
-    .icon-bar {
-      background-color: @headerTextColor;
-    }
-  }
-
-  position: relative;
-
-  border-bottom: 4px solid @headingsAccentColor;
 }
 div.heading-info {
   color: @headerTextColor;
-  margin-left: @leftMargin;
   font-weight: bold;
-  position: absolute;
-  // put heading info on bottom
-  /*bottom: 1em;*/
-  // put heading info on right bottom
-  bottom: 1em;
-  right: 2em;
   text-align: right;
 }
 
@@ -139,7 +139,7 @@ a.header_logo {
 
 div.header_social {
   text-align: right;
-  padding-right: 2em;
+  /*padding-right: 2em;*/
   padding-left: 0;
 }
 
