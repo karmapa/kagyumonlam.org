@@ -96,14 +96,17 @@ a.navbar-brand {
  * --------------------------------------------------
  */
 .row-offcanvas {
-  position: absolute;
-  top: 0;
-  /*top: @navbarHeight;*/
-  /*height: calc(~"100% - " @navbarHeight);*/
   height: 100%;
+  float: left;
+  margin-right: 1em;
+
 }
 @media screen and (max-width: 768px) {
   .row-offcanvas {
+    position: absolute;
+    top: 0;
+    /*top: @navbarHeight;*/
+    /*height: calc(~"100% - " @navbarHeight);*/
     -webkit-transition: all 0.25s ease-out;
     -moz-transition: all 0.25s ease-out;
     transition: all 0.25s ease-out;
