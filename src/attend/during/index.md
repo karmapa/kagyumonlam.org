@@ -26,7 +26,7 @@ Many thousands of people from all cultures will attend this year's Kagyu Monlam.
    * Practice patience while waiting in queues: Do not push your way to the front. 
    * Please, no photography or recording at any time! The Monlam organization will share professionally produced photos and videos via social media. 
    * Observe respectful [shrine room etiquette](http://www.kagyu.org/ktd/monastery/dharma_etiquette.php) and work not to disturb others around you. If disturbed, work to minimize further disturbance.  
-      * When in the presence of a Rinpoche, defer to him in every way possible. Stand when he enters a room--especially the shrine room.
+      * When in the presence of a Rinpoche, defer to him in every way possible.
       * Do not leave Dharma books and puja materials on the floor or step over them. 
       * Do not point your feet toward the throne or any shrine.
       * During teachings, do not speak, get up, or walk around unless absolutely necessary.

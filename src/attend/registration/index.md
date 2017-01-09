@@ -4,8 +4,8 @@ title: Registration Information
 ---
 
 # Registration for lay practitioners
-* Lay practitioners who have never registered for the Monlam, please [register here](http://www.milaguru.org/amember/signup.php) to become a Friend of the Kagyu Monlam. 
-* Lay practitioners who have registered before, please [renew your membership](http://www.milaguru.org/amember/member.php).
+* Lay practitioners who have never registered for the Monlam can register in person at the event. You will need to bring your passport, location where you are staying, and duration of your stay.  
+* You may also become a [Friend of the Kagyu Monlam](http://www.milaguru.org/amember/member.php), which offers several benefits during your stay in Bodhgaya, including meals. Lay practitioners who have before registered as a Friend of the Monlam, please [renew your membership](http://www.milaguru.org/amember/member.php) each year.
 * Groups of lay practitioners, please email [groupregistration@kagyumonlam.org](groupregistration@kagyumonlam.org). 
 
 Once you have become a Friend of Kagyu Monlam, we will send you additional information about the event by email.

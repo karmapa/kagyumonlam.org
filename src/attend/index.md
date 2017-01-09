@@ -3,11 +3,20 @@ layout: event.njk
 title: Attending the Kagyu Monlam
 ---
 
+# Important Note about Indian Currency
+Please take note that, as of November 8, 2016, the government of India has [banned](http://www.nytimes.com/2016/11/11/world/asia/india-rupee-ban-narendra-modi.html) all 500INR and 1000INR notes. This has greatly constrained the amount of currency available. ATMs can dispense a maximum of 2,000INR per day, and ATM lines are quite long. Sometimes you can wait in line only to have that ATM run out of money. 
+
+While the situation is expected to improve by the time of the Monlam, all visitors are highly encouraged to obtain Indian Rupees **before** you reach Bodhgaya as cash supplies here are quite limited. **Do not accept any 500INR or 1,000INR notes as these are not accepted by any vendors and are no longer legal tender.**
+
 # Livestream
 To view recorded content from the Kagyu Monlam, please visit the [Karmapa channel](https://www.youtube.com/user/Karmapateachings) on YouTube.
 
 # Attending in Person
-If you wish to attend the Monlam in person, please use this process:
+Anyone is welcome to attend the Kagyu Monlam, free of charge. There is no online registration for the event. For security reasons, all participants must register in person at the <a href="https://goo.gl/maps/hZsxsW1zqMJ2" target="_blank">Kagyu Monlam Pavilion</a> with your passport, local address, home address, dates of your stay in India, etc. 
+
+We encourage all attendees to become members of the Kagyu Monlam. [Membership](/attend/registration/) costs $150USD and affords many benefits, including help with accommodations and a meal plan during the Monlam. 
+
+
 
   1. [Register](/attend/registration/) for the Monlam. 
   1. Understand your [travel](/attend/travel/) options to and from Bodhgaya.

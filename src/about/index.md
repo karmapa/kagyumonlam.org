@@ -13,7 +13,7 @@ In 1983, [Kyabje Kalu Rinpoche](http://www.kagyu.org/kagyulineage/teachers/tea11
 
 In 2004, the [17th Gyalwang Karmapa, Orgyen Trinley Dorje](http://kagyuoffice.org/karmapa/) took responsibility for the Monlam. Following the example of the dharma activities of the great beings of the past, he restructured the event, and compiled a new prayer text, reflecting the splendour of this timeless tradition, making the Monlam ever more glorious, meeting the needs of today's international Buddhist community as much as possible, and benefiting an even greater number of people.
 
-# Transcripts of Teachings by His Holiness the 17th Gyalwang Karmapa, Orgyen Trinley Dorje
+# Summaries of Teachings by His Holiness the 17th Gyalwang Karmapa, Orgyen Trinley Dorje
 
    * 2009/01/14 - <a href="20090114_HHK_Teachings_Living_The_Dharma.html" target="_parent">17th Gyalwang Karmapa's Teachings -- &ldquo;Living The Dharma&rdquo;</a>
    * 2009/01/13 - <a href="20090113_HHK_Teachings_Living_The_Dharma.html" target="_parent">17th Gyalwang Karmapa's Teachings -- &ldquo;Living The Dharma&rdquo;</a>
