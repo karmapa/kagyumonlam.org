@@ -74,41 +74,41 @@
                 </div>
             </div>
         </div><!--/.navbar -->
-        <div class="row-offcanvas row-offcanvas-left">
-          <div id="sidebar" class="sidebar-offcanvas">
-              <div class="col-md-12">
-                  <h3>Navigation</h3>
-                  <button type="button" class="btn btn-default btn-sm navigation-close visible-xs" aria-label="Close Navigation">
-                      <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                  </button>
+        <div id="main" class="container">
+            <div class="row-offcanvas row-offcanvas-left">
+              <div id="sidebar" class="sidebar-offcanvas">
+                  <div class="col-md-12">
+                      <h3>Navigation</h3>
+                      <button type="button" class="btn btn-default btn-sm navigation-close visible-xs" aria-label="Close Navigation">
+                          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                      </button>
 
-                <ul class="nav">
-                    {% for n in navigation %}
+                    <ul class="nav">
+                        {% for n in navigation %}
 
-                        <li class="{% if n.url == path %}active{% endif %} {% if n.children %}parent{% endif %}">
-                            <a href="{{n.url}}">{{n.title}}</a>
-                            {% if n.url == path %}
-                                <span class="sr-only">(current)</span>
+                            <li class="{% if n.url == path %}active{% endif %} {% if n.children %}parent{% endif %}">
+                                <a href="{{n.url}}">{{n.title}}</a>
+                                {% if n.url == path %}
+                                    <span class="sr-only">(current)</span>
+                                {% endif %}
+                            </li>
+
+                            {% if n.children %}
+                                {% for child in n.children %}
+                                    <li class="child{% if child.url == path %} active{% endif %}">
+                                        <a href="{{child.url}}">{{child.title}}</a>
+                                        {% if child.url == path %}
+                                            <span class="sr-only">(current)</span>
+                                        {% endif %}
+                                    </li>
+                                {% endfor %}
                             {% endif %}
-                        </li>
 
-                        {% if n.children %}
-                            {% for child in n.children %}
-                                <li class="child{% if child.url == path %} active{% endif %}">
-                                    <a href="{{child.url}}">{{child.title}}</a>
-                                    {% if child.url == path %}
-                                        <span class="sr-only">(current)</span>
-                                    {% endif %}
-                                </li>
-                            {% endfor %}
-                        {% endif %}
-
-                    {% endfor %}
-                </ul>
+                        {% endfor %}
+                    </ul>
+                  </div>
               </div>
-          </div>
-        </div><!--/row-offcanvas -->
-        <div id="main" class="container-fluid">
+            </div><!--/row-offcanvas -->
             {% block main %}
                 {{contents | safe}}
             {% endblock %}
