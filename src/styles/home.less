@@ -1,5 +1,11 @@
 @backgroundGrey: #eee;
 
+div.quick_navigation_box_row {
+  &:last-child {
+    margin-bottom: 2em;
+  }
+}
+
 div.quick_navigation_box {
 
   padding-top: 2em;
@@ -11,6 +17,9 @@ div.quick_navigation_box {
     padding-bottom: 1em;
     margin-left: 1em;
     margin-right: 1em;
+    font-size: 1.25em;
+    color: @textColor;
+    font-weight: 400;
     figure {
       img {
         /* Extra small devices (phones, less than 768px) */
@@ -39,6 +48,10 @@ div.quick_navigation_box {
     span {
       h2 {
         margin-top: 0;
+        color: @gray-light;
+        font-size: 1.0em;
+        text-transform: uppercase;
+        font-weight: 700;
       }
     }
   }
