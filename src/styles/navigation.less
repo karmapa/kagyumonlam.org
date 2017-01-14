@@ -1,4 +1,4 @@
-
+@import "node_modules/bootstrap/less/mixins/grid.less";
 /*@navbar-default-toggle-border-color: black;*/
 /*@navbar-default-toggle-hover-bg: black;*/
 /*@navbar-default-toggle-icon-bar-bg: black;*/
@@ -58,25 +58,10 @@ a.navbar-brand {
 @navFontColor: white;
 
 #sidebar {
-  width: @navSize;
-  min-width: @navSize;
-  max-width: @navSize;
-  background-color:#f5f5f5;
-  float: left;
-  height:100%;
-  position:relative;
-  overflow-y:auto;
-  overflow-x:hidden;
-  font: 16px "Source Sans Pro", Helvetica, sans-serif;
-    font-style: normal;
-    font-variant-ligatures: normal;
-    font-variant-caps: normal;
-    font-variant-numeric: normal;
-    font-weight: normal;
-    font-stretch: normal;
-    font-size: 16px;
-    line-height: normal;
-    font-family: "Source Sans Pro", Helvetica, sans-serif;
+  width: 100%;
+  padding-left: 15px;
+  /*overflow-y: auto;*/
+  /*overflow-x: hidden;*/
 
 
   button.navigation-close {
@@ -84,6 +69,26 @@ a.navbar-brand {
     right: 1em;
     top: 1em;
     z-index: 1000;
+  }
+
+  /* Extra small devices (phones, less than 768px) */
+  /* No media query since this is the default in Bootstrap */
+
+
+  /* Small devices (tablets, 768px and up) */
+  @media (min-width: @screen-sm-min) {
+    padding-left: none;
+    overflow: auto;
+  }
+
+  /* Medium devices (desktops, 992px and up) */
+  @media (min-width: @screen-md-min) {
+
+  }
+
+  /* Large devices (large desktops, 1200px and up) */
+  @media (min-width: @screen-lg-min) {
+
   }
 }
 /*#main {*/
@@ -96,36 +101,37 @@ a.navbar-brand {
  * --------------------------------------------------
  */
 .row-offcanvas {
+  background-color: @whiteColor;
   height: 100%;
-  float: left;
-  margin-right: 1em;
   z-index: 500;
-
-}
-@media screen and (max-width: 768px) {
-  .row-offcanvas {
-    position: absolute;
-    top: 0;
-    /*top: @navbarHeight;*/
-    /*height: calc(~"100% - " @navbarHeight);*/
-    -webkit-transition: all 0.25s ease-out;
-    -moz-transition: all 0.25s ease-out;
-    transition: all 0.25s ease-out;
-    /*width: calc(~"100% + " @navSize);*/
-  }
-
-  .row-offcanvas-left
-  {
-    left: -@navSize;
-  }
-
-  .row-offcanvas-left.active {
+  position: absolute;
+  top: 0;
+  width: @navSize;
+  /*top: @navbarHeight;*/
+  /*height: calc(~"100% - " @navbarHeight);*/
+  -webkit-transition: all 0.25s ease-out;
+  -moz-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+  /*width: calc(~"100% + " @navSize);*/
+  left: -@navSize;
+  &.active {
     left: 0;
   }
 
-  .sidebar-offcanvas {
-    /*position: absolute;*/
-    /*top: 0;*/
+  @media (min-width: @screen-sm-min) {
+    .make-sm-column(4);
+    left: inherit;
+
+  }
+
+  /* Medium devices (desktops, 992px and up) */
+  @media (min-width: @screen-md-min) {
+
+  }
+
+  /* Large devices (large desktops, 1200px and up) */
+  @media (min-width: @screen-lg-min) {
+
   }
 }
 

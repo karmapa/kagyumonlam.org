@@ -75,9 +75,9 @@
             </div>
         </div><!--/.navbar -->
         <div id="main" class="container">
-            <div class="row-offcanvas row-offcanvas-left">
+            <div class="row-offcanvas">
               <div id="sidebar" class="sidebar-offcanvas">
-                  <div class="col-md-12">
+                  <div>
                       <h3>Navigation</h3>
                       <button type="button" class="btn btn-default btn-sm navigation-close visible-xs" aria-label="Close Navigation">
                           <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
@@ -109,9 +109,11 @@
                   </div>
               </div>
             </div><!--/row-offcanvas -->
-            {% block main %}
-                {{contents | safe}}
-            {% endblock %}
+            <div id="main" class="col-sm-8">
+                {% block main %}
+                    {{contents | safe}}
+                {% endblock %}
+            </div>
         </div>
 
     </body>
