@@ -17,6 +17,9 @@
 @brand-primary: @headingsAccentColor;
 @whiteColor: #f5f5f5;
 
+@bodyGradientTopColor: #b4d9e9;
+@bodyGradientBottomColor: #fce2ce;
+
 /*@navbar-default-toggle-border-color: black;*/
 /*@navbar-default-toggle-hover-bg: black;*/
 /*@navbar-default-toggle-icon-bar-bg: black;*/
@@ -24,7 +27,9 @@
 
 
 body {
-  background-image: url('/media/flags_background_1680.jpg');
+  background: rgba(255, 255, 255, 0.4);
+  background: linear-gradient(@bodyGradientTopColor, @bodyGradientBottomColor);
+
 }
 
 
@@ -62,7 +67,7 @@ main {
 /*}*/
 
 #main {
-  background-color: rgba(255, 255, 255, 0.4);
+
 }
 
 /*@navbarHeight: 165px;*/
@@ -179,7 +184,7 @@ main {
 /*}*/
 
 body,html {
-  height:100%;
+  min-height:100%;
 }
 
 /*body {*/
