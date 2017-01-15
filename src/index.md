@@ -20,6 +20,7 @@ quick_navigation_items:
         thumbnail_img_src: "../media/images/workers.jpg"
         href: /support
 
+
 ---
 
 ## Livestream
