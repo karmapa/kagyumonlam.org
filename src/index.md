@@ -11,7 +11,7 @@ quick_navigation_items:
         href: /about
     -
         title: Attend
-        subtitle: Find details about attending the next Kagyu Monlam, February 13-19, in Bodhgaya, India.
+        subtitle: Find details about attending the next Kagyu Monlam, February 13-19, 2017, in Bodhgaya, India.
         thumbnail_img_src: "../media/images/sangha.jpg"
         href: /attend
     -
