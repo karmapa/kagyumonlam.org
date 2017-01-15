@@ -16,6 +16,9 @@
   url: "/attend"
   children:
     -
+      title: "This Year's Program"
+      url: "/attend/program"
+    -
       title: "Accommodation"
       url: "/attend/accommodation"
     -
