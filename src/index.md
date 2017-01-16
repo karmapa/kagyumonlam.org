@@ -32,4 +32,5 @@ quick_navigation_items:
         subtitle: Provide financial or volunteer support for the next Kagyu Monlam.
         thumbnail_img_src: "../media/images/workers.jpg"
         href: /support
+
 ---

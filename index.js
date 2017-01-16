@@ -1,3 +1,5 @@
+"use strict";
+
 var Metalsmith = require("metalsmith");
 var markdown = require("metalsmith-markdown");
 var layouts = require("metalsmith-layouts");
@@ -7,6 +9,7 @@ var serve = require("metalsmith-serve");
 var browserify = require("metalsmith-browserify");
 var less = require("metalsmith-less");
 var fingerprint = require("metalsmith-fingerprint");
+var ignore = require("metalsmith-ignore");
 
 var FeedParser = require("feedparser");
 var request = require("request");
@@ -130,10 +133,17 @@ var retrieveMonlamTagFeed = function (retrieveOrParserDone) {
   });
 };
 
+var cssBuildFilePath = 'styles/index.css';
+var jsBuildFilePath = 'build.js';
 
+/**
+ *  Make special variables available to templates.
+ **/
 var addEnvironmentVariables = function(files, metalsmith, done) {
   for (var filePath in files) {
     files[filePath].NODE_ENV = process.env.NODE_ENV;
+    files[filePath].cssBuildFilePath = cssBuildFilePath;
+    files[filePath].jsBuildFilePath = jsBuildFilePath;
   }
   done();
 };
@@ -149,31 +159,61 @@ var builder = Metalsmith(__dirname)
   .use(addEnvironmentVariables)
   .use(addPath)
   .use(addCurrentNav)
-  .use(addRetrievedPosts)
-  .use(less({
-    pattern: "styles/index.less",
-    // options for less compiler
-    render: {
-      paths: "src/styles/"
-    },
-    useDynamicSourceMap: true
+  .use(addRetrievedPosts);
+
+
+let lessOptions = {
+  pattern: "styles/index.less",
+  // options for less compiler
+  render: {
+    paths: "src/styles/"
+  }
+};
+
+// in development mode, build less source maps
+if (process.env.NODE_ENV == "development") {
+  lessOptions.useDynamicSourceMap = true;
+}
+
+// less build
+builder.use(less(lessOptions));
+// js build
+builder.use(browserify(jsBuildFilePath, [
+  'src/index.js'
+]));
+
+// in production mode
+if (process.env.NODE_ENV != "development") {
+
+  // fingerprint css and js build files
+  builder.use(fingerprint({
+    pattern: cssBuildFilePath
   }))
-  .use(browserify('build.js', [
-    'src/index.js'
-  ]))
   .use(fingerprint({
-    pattern: 'styles/index.css'
-  }))
-  .use(fingerprint({
-    pattern: 'build.js'
-  }))
-  .use(layouts({
-    engine: "nunjucks",
-    directory: "layouts",
-    settings: {
-      views: 'layouts'
-    }
+    pattern: jsBuildFilePath
   }));
+  
+  // remove intermediate files
+  builder.use(ignore({
+    patterns: [
+      // less build files
+      "**/*.less",
+      // css build file without fingerprint
+      cssBuildFilePath,
+      // js build file without fingerprint
+      jsBuildFilePath
+    ]
+  }));
+
+}
+
+builder.use(layouts({
+  engine: "nunjucks",
+  directory: "layouts",
+  settings: {
+    views: 'layouts'
+  }
+}));
 
 if (process.env.NODE_ENV && process.env.NODE_ENV == "development") {
   // watch files for changes

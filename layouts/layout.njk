@@ -26,8 +26,8 @@
 
         {% if NODE_ENV == "development" %}
             <script src="http://localhost:35729/livereload.js"></script>
-            <link rel="stylesheet" href="/styles/index.css">
-            <script src="/build.js"></script>
+            <link rel="stylesheet" href="/{{cssBuildFilePath}}">
+            <script src="/{{jsBuildFilePath}}"></script>
         {% else %}
             <link rel="stylesheet" href="/{{ fingerprint['styles/index.css'] }}">
             <script src="/{{ fingerprint['build.js']}}"></script>
@@ -69,7 +69,9 @@
                             <li><a class="soc-youtube" href="http://www.youtube.com/user/Karmapateachings"></a></li>
                             <li><a class="soc-twitter" href="https://twitter.com/Karmapa17"></a></li>
                             <li><a class="soc-googleplus soc-icon-last" href="https://plus.google.com/109385250422754644767/posts"></a></li>
+                            <li><a class="btn btn-primary btn-xs donate-button" href="/support">Donate</a></li>
                         </ul>
+                        
                     </div>
                 </div>
             </div>
