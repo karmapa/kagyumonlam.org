@@ -31,5 +31,9 @@
       title: "Travel to Bodhgaya"
       url: "/attend/travel"
 -
+  title: "Contacts"
+  url: "/contacts"
+
+-
   title: "Support"
   url: "/support"
