@@ -11,18 +11,7 @@ var less = require("metalsmith-less");
 var fingerprint = require("metalsmith-fingerprint");
 var ignore = require("metalsmith-ignore");
 
-var FeedParser = require("feedparser");
-var request = require("request");
-
 var path = require("path");
-
-// all retrieved posts from the feed
-var retrievedPosts = {
-  // in the order they came in
-  all: [],
-  // indexed by the GUID (probably unique URL)
-  byguid: {}
-};
 
 
 /**
@@ -35,13 +24,6 @@ var addPath = function(files, metalsmith, done) {
   for (var filePath in files) {
     dirname = path.dirname(filePath);
     files[filePath].path = (dirname == ".") ? "/" : "/" + dirname;
-  }
-  done();
-};
-
-var addRetrievedPosts = function (files, metalsmith, done) {
-  for (var filePath in files) {
-    files[filePath].retrievedPosts = retrievedPosts;
   }
   done();
 };
@@ -76,62 +58,6 @@ var addCurrentNav = function(files, metalsmith, done) {
   done();
 };
 
-var parseMonlamFeedItem = function (originalItem) {
-  var enhancedItem = originalItem;
-
-  if (originalItem) {
-
-    //console.log("originalItem[\"rss:p\"]");
-    //console.log(originalItem["rss:p"]);
-    //console.log(originalItem["rss:p"][0]["a"]["img"]["@"]);
-    //console.log(originalItem["rss:p"][1]["#"]);
-
-    //console.log(originalItem.guid);
-
-    enhancedItem.img = originalItem["rss:p"][0]["a"]["img"]["@"];
-    enhancedItem.title = originalItem["rss:title"]["#"];
-  }
-
-  //console.log("enhancedItem");
-  //console.log(enhancedItem);
-
-  return enhancedItem;
-
-};
-
-/**
- *  Call this to begin to retrieve the monlam feed.
- *
- *  @param  {Function}  retrieveOrParserDone - This gets called when the
- *  retrieve is finished, because it failed or finished parsing successfully.
- **/
-var retrieveMonlamTagFeed = function (retrieveOrParserDone) {
-  var url = "http://kagyuoffice.org/tag/kagyu-monlam/feed",
-    req,
-    parser;
-
-  req = request(url);
-  parser = new FeedParser();
-
-  req.on('error', retrieveOrParserDone);
-  req.on('response', function(res) {
-    if (res.statusCode != 200) return this.emit('error', new Error('Bad status code'));
-    //var charset = getParams(res.headers['content-type'] || '').charset;
-    //res = maybeTranslate(res, charset);
-    // And boom goes the dynamite
-    res.pipe(parser);
-  });
-
-  parser.on('error', retrieveOrParserDone);
-  parser.on('end', retrieveOrParserDone);
-  parser.on('readable', function() {
-    var post;
-    while (post = parseMonlamFeedItem(this.read())) {
-      retrievedPosts.all.push(post);
-      retrievedPosts.byguid[post.guid] = post;
-    }
-  });
-};
 
 var cssBuildFilePath = 'styles/index.css';
 var jsBuildFilePath = 'build.js';
@@ -158,8 +84,7 @@ var builder = Metalsmith(__dirname)
   .use(markdown())
   .use(addEnvironmentVariables)
   .use(addPath)
-  .use(addCurrentNav)
-  .use(addRetrievedPosts);
+  .use(addCurrentNav);
 
 
 let lessOptions = {
@@ -232,25 +157,6 @@ if (process.env.NODE_ENV && process.env.NODE_ENV == "development") {
     host: "0.0.0.0"
   }));
 };
-
-//console.log("Retrieving monlam feed...");
-//retrieveMonlamTagFeed(function (err) {
-
-  //if (err) {
-    //console.log(err.stack);
-    //throw err;
-  //} else {
-    //console.log("Building site...");
-    //builder.build(function (err) {
-      //if (err) {
-        //console.log(err.stack);
-        //throw err;
-      //} else {
-        //console.log("Build complete!");
-      //}
-    //});
-  //}
-//});
 
 console.log("Building site...");
 builder.build(function (err) {
