@@ -5,6 +5,11 @@ event_date: February 13-23, 2016
 event_location: Bodhgaya, India
 quick_navigation_items:
     -
+        title: News & Announcements
+        subtitle: Official updates concerning this year's event.
+        thumbnail_img_src: "../media/images/pavilion_10.jpg"
+        href: /news
+    -
         title: About
         subtitle: Learn about the history of the Kagyu Monlam, and His Holiness the 17th Gyalwang Karmapa, Orgyen Trinley Dorje.
         thumbnail_img_src: "../media/images/karmapa_17_08.jpg"
@@ -20,13 +25,11 @@ quick_navigation_items:
         thumbnail_img_src: "../media/images/pavilion_4.jpg"
         href: https://www.youtube.com/channel/UCnz7WvLLb4WcjZjswVQAdAQ
         target: _blank
-
     -
         title: Contacts
         subtitle: How to contact us.    
         thumbnail_img_src: "../media/images/torma.jpg"
         href: /contacts
-
     -
         title: Support
         subtitle: Provide financial or volunteer support for the next Kagyu Monlam.

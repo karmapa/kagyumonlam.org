@@ -2,6 +2,9 @@
   title: "Home"
   url: "/"
 -
+  title: "News"
+  url: "/news"
+-
   title: "About"
   url: "/about"
   children:
@@ -37,3 +40,10 @@
 -
   title: "Support"
   url: "/support"
+  children:
+    -
+      title: "Friends of the Kagyu Monlam"
+      url: "/support/friends"
+    -
+      title: "Volunteering"
+      url: "/support/volunteer"
