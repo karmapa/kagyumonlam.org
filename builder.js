@@ -44,10 +44,10 @@ var builder = Metalsmith(__dirname)
   .use(add_current_nav);
 
 let lessOptions = {
-  pattern: "styles/index.less",
+  pattern: "../styles/index.less",
   // options for less compiler
   render: {
-    paths: "content/styles/"
+    paths: "styles/"
   }
 };
 
@@ -102,7 +102,7 @@ if (process.env.NODE_ENV && process.env.NODE_ENV == "development") {
     paths: {
       //"${source}/**/*": true,
       "layouts/**/*": "**/*.md",
-      "${source}/styles/**/*": "**/*.less",
+      "styles/**/*": "**/*.less",
       "${source}/**/*.md": true,
       "${source}/index.js": true
     },
