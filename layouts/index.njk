@@ -1,3 +1,17 @@
+{##
+#	@file		index.njk
+#
+#	@desc		This template is for the main page of the website, it includes
+#               what we refer to as `quick_navigation_items` which are the
+#               boxes on the main page linking to specific areas of the
+#               site.
+#
+#   @author		Colin Sullivan <colin [at] colin-sullivan.net>
+#
+#	@copyright	2017 the kagyumonlam.org project contributors.
+#	@license	Licensed under the MIT license.
+##}
+
 {% extends "./layout.njk" %}
 
 {% block main %}
@@ -15,5 +29,5 @@
             </div>
         </div>
     {% endfor %}
-                    {{contents | safe}}
+    {{contents | safe}}
 {% endblock %}

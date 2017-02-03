@@ -1,5 +1,5 @@
 ---
-layout: history.njk
+layout: layout.njk
 title: News & Announcements
 ---
 # Contents
