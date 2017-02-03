@@ -11,69 +11,16 @@ var less = require("metalsmith-less");
 var fingerprint = require("metalsmith-fingerprint");
 var ignore = require("metalsmith-ignore");
 
-var path = require("path");
 
+var add_path = require("./lib/add_path.js");
+var add_current_nav = require("./lib/add_current_nav.js");
+var add_environment_variables = require("./lib/add_environment_variables.js");
 
-/**
- *  Add `path` metadata to each page, so the template can tell what page
- *  it is programatically.
- **/
-var addPath = function(files, metalsmith, done) {
-  var dirname;
-  var basename;
-  for (var filePath in files) {
-    dirname = path.dirname(filePath);
-    files[filePath].path = (dirname == ".") ? "/" : "/" + dirname;
-  }
-  done();
+var environmentVars = {
+  NODE_ENV: process.env.NODE_ENV,
+  cssBuildFilePath: 'styles/index.css',
+  jsBuildFilePath: 'build.js'
 };
-
-/**
- *  Add `currentNavigation` to point to the top-level navigation item for
- *  rendering sub-navigation on a page.  This depends on the `addPath` plugin
- *  above.
- **/
-var addCurrentNav = function(files, metalsmith, done) {
-  var navigation = metalsmith.metadata().navigation;
-
-  var pagePath;
-  var topLevelPagePath;
-  var navItem;
-  for (var filePath in files) {
-    pagePath = files[filePath].path;
-    topLevelPagePath = pagePath.split("/")[1];
-
-    // find item in navigation metadata
-    for (var navItemIndex in navigation) {
-      navItem = navigation[navItemIndex];
-
-      if (navItem.url.match(topLevelPagePath)) {
-        //console.log(`Matched page '${pagePath}' with nav url '${navItem.url}'`);
-        files[filePath].currentNavigation = navItem;
-        break;
-      }
-    }
-
-  }
-  done();
-};
-
-
-var cssBuildFilePath = 'styles/index.css';
-var jsBuildFilePath = 'build.js';
-
-/**
- *  Make special variables available to templates.
- **/
-var addEnvironmentVariables = function(files, metalsmith, done) {
-  for (var filePath in files) {
-    files[filePath].NODE_ENV = process.env.NODE_ENV;
-    files[filePath].cssBuildFilePath = cssBuildFilePath;
-    files[filePath].jsBuildFilePath = jsBuildFilePath;
-  }
-  done();
-};
-
 
 
 var builder = Metalsmith(__dirname)
@@ -82,9 +29,9 @@ var builder = Metalsmith(__dirname)
     navigation: "navigation.yaml",
   }))
   .use(markdown())
-  .use(addEnvironmentVariables)
-  .use(addPath)
-  .use(addCurrentNav);
+  .use(add_environment_variables(environmentVars))
+  .use(add_path)
+  .use(add_current_nav);
 
 
 let lessOptions = {
@@ -103,7 +50,7 @@ if (process.env.NODE_ENV == "development") {
 // less build
 builder.use(less(lessOptions));
 // js build
-builder.use(browserify(jsBuildFilePath, [
+builder.use(browserify(environmentVars.jsBuildFilePath, [
   'src/index.js'
 ]));
 
@@ -112,10 +59,10 @@ if (process.env.NODE_ENV != "development") {
 
   // fingerprint css and js build files
   builder.use(fingerprint({
-    pattern: cssBuildFilePath
+    pattern: environmentVars.cssBuildFilePath
   }))
   .use(fingerprint({
-    pattern: jsBuildFilePath
+    pattern: environmentVars.jsBuildFilePath
   }));
   
   // remove intermediate files
@@ -124,9 +71,9 @@ if (process.env.NODE_ENV != "development") {
       // less build files
       "**/*.less",
       // css build file without fingerprint
-      cssBuildFilePath,
+      environmentVars.cssBuildFilePath,
       // js build file without fingerprint
-      jsBuildFilePath
+      environmentVars.jsBuildFilePath
     ]
   }));
 
