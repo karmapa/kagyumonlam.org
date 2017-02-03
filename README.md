@@ -6,3 +6,5 @@ In the `src/` directory is the raw content of the website in [Markdown](https://
 To build:
 
     npm run build
+
+Templates: https://mozilla.github.io/nunjucks/

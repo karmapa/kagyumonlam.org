@@ -34,6 +34,7 @@ var environmentVars = {
 
 var builder = Metalsmith(__dirname)
   .ignore(["*.js", "*.swp"])
+  .source("./content/")
   .use(metadata({
     navigation: "navigation.yaml",
   }))
@@ -46,7 +47,7 @@ let lessOptions = {
   pattern: "styles/index.less",
   // options for less compiler
   render: {
-    paths: "src/styles/"
+    paths: "content/styles/"
   }
 };
 
@@ -59,7 +60,7 @@ if (process.env.NODE_ENV == "development") {
 builder.use(less(lessOptions));
 // js build
 builder.use(browserify(environmentVars.jsBuildFilePath, [
-  'src/index.js'
+  'content/index.js'
 ]));
 
 // in production mode
