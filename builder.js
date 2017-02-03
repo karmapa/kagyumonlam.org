@@ -90,9 +90,9 @@ if (process.env.NODE_ENV != "development") {
 
 builder.use(layouts({
   engine: "nunjucks",
-  directory: "layouts",
+  directory: builder._source + "/layouts",
   settings: {
-    views: 'layouts'
+    views: builder._source + '/layouts'
   }
 }));
 
@@ -101,7 +101,7 @@ if (process.env.NODE_ENV && process.env.NODE_ENV == "development") {
   builder.use(watch({
     paths: {
       //"${source}/**/*": true,
-      "layouts/**/*": "**/*.md",
+      "${source}/layouts/**/*": "**/*.md",
       "${source}/styles/**/*": "**/*.less",
       "${source}/**/*.md": true,
       "${source}/index.js": true
