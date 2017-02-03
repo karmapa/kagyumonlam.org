@@ -29,7 +29,7 @@ var add_environment_variables = require("./lib/add_environment_variables.js");
 var environmentVars = {
   NODE_ENV: process.env.NODE_ENV,
   cssBuildFilePath: '_assets/styles/index.css',
-  jsBuildFilePath: 'build.js'
+  jsBuildFilePath: '_assets/scripts/build.js'
 };
 
 var builder = Metalsmith(__dirname)

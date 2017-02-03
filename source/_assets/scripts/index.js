@@ -46,6 +46,4 @@ $(document).ready(function () {
   // if header or body is clicked, close navigation
   $('div.navbar').click(close_navigation_if_open);
   $('div#main').click(close_navigation_if_open);
-
-  
 });
