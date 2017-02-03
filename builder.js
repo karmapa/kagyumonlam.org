@@ -28,7 +28,7 @@ var add_environment_variables = require("./lib/add_environment_variables.js");
 
 var environmentVars = {
   NODE_ENV: process.env.NODE_ENV,
-  cssBuildFilePath: 'styles/index.css',
+  cssBuildFilePath: '_assets/styles/index.css',
   jsBuildFilePath: 'build.js'
 };
 
@@ -44,10 +44,10 @@ var builder = Metalsmith(__dirname)
   .use(add_current_nav);
 
 let lessOptions = {
-  pattern: "styles/index.less",
+  pattern: "_assets/styles/index.less",
   // options for less compiler
   render: {
-    paths: "source/styles/"
+    paths: builder._source + "/_assets/styles/"
   }
 };
 
@@ -60,7 +60,7 @@ if (process.env.NODE_ENV == "development") {
 builder.use(less(lessOptions));
 // js build
 builder.use(browserify(environmentVars.jsBuildFilePath, [
-  'source/index.js'
+  builder._source + '/_assets/scripts/index.js'
 ]));
 
 // in production mode
@@ -90,9 +90,9 @@ if (process.env.NODE_ENV != "development") {
 
 builder.use(layouts({
   engine: "nunjucks",
-  directory: builder._source + "/layouts",
+  directory: builder._source + "/_assets/layouts",
   settings: {
-    views: builder._source + '/layouts'
+    views: builder._source + '/_assets/layouts'
   }
 }));
 
@@ -101,10 +101,10 @@ if (process.env.NODE_ENV && process.env.NODE_ENV == "development") {
   builder.use(watch({
     paths: {
       //"${source}/**/*": true,
-      "${source}/layouts/**/*": "**/*.md",
-      "${source}/styles/**/*": "**/*.less",
+      "${source}/_assets/layouts/**/*": "**/*.md",
+      "${source}/_assets/styles/**/*": "**/*.less",
       "${source}/**/*.md": true,
-      "${source}/index.js": true
+      "${source}/**/*.js": true
     },
     livereload: true
   }));

@@ -41,8 +41,8 @@
             <link rel="stylesheet" href="/{{cssBuildFilePath}}">
             <script src="/{{jsBuildFilePath}}"></script>
         {% else %}
-            <link rel="stylesheet" href="/{{ fingerprint['styles/index.css'] }}">
-            <script src="/{{ fingerprint['build.js']}}"></script>
+            <link rel="stylesheet" href="/{{ fingerprint[cssBuildFilePath] }}">
+            <script src="/{{ fingerprint[jsBuildFilePath]}}"></script>
         {% endif %}
 
 
