@@ -1,9 +1,7 @@
 # Kagyu Monlam Website
-
 This is a website intended to replace the current [kagyumonlam.org](http://kagyumonlam.org/English/News/news_main.html).  It is a static website generator which means all of the content and code used to generate the website is contained here.  See our [design decisions](https://github.com/karmapa/kagyumonlam.org/wiki/Design-Decisions) wiki page for more on why we chose a static website generator and what this means.
 
 ## Contributing
-
 You would like to contribute to this project? Great! We are happy to help you get up and running.
 
 First, you'll need to get your development environment set up so you can run the website locally.  See our [Development Environment Setup](https://github.com/karmapa/kagyumonlam.org/wiki/Development-Environment-Setup) guide for instructions.
@@ -15,15 +13,16 @@ Once you've made some changes you'll have to submit a pull request.  See our [Pu
 If you run into any trouble or would like to discuss, feel free to email us at [kagyu-monlam-web@googlegroups.com](mailto:kagyu-monlam-web@googlegroups.com).
 
 ## Understanding this Code
-
 This codebase is a static website generator built using the [metalsmith](http://www.metalsmith.io/) framework.
 
 The process works like this:
 
+
 The `source/` directory contains all of the files needed to build the website.  When the build process completes, the `build/` directory will contain the entire website, ready for hosting on a web server.
 
-### Directory Structure
+The `builder.js` file is the entry point to the static website building process.  It utilizes some methods in the `lib/` directory.  You'll only need to modify these if you need to change how the website building process works.
 
+### Directory Structure in `source/`
 Lets look a bit closer at the `source/` directory.  You'll see one folder called `_assets` and a bunch of others, something that looks like this:
 
 	▾ source/
@@ -58,7 +57,6 @@ The remaining folders directly map to pages of our website.  For example, lets t
 		navigation.yaml
 
 ### Example Markdown `about/index.md`
-
 Inside `about/`, we have subfolders that are also website pages (one about the Bodhgaya and one about Karmapa).  This directory structure maps directly to the website URL also.  For example, in this case we would have `kagyumonlam.org/about/` and `kagyumonlam.org/about/bodhgaya/`, etc.  The `index.md` files are where the contents of each page is stored.  This content is written in Markdown format with a little header information in YAML.  See our [Technologies Used](https://github.com/karmapa/kagyumonlam.org/wiki/Technologies-Used) page for more specifics about these technologies.
 
 For now, just take a look in `about/index.md` to get a feel for it.  First, we have our YAML header section which defines a few configuration options for the about page:
@@ -70,11 +68,11 @@ title: History of the Kagyu Monlam
 ---
 ```
 
-this is followed by the Markdown content of the page:
+This YAML header is followed by the Markdown content of the page:
 
 ```markdown
-# History of the Kagyu Monlam
 
+# History of the Kagyu Monlam
 The name "Kagyu Monlam" originated five hundred years ago in Tibet when the [Seventh Karmapa Chödrak Gyatso](http://kagyuoffice.org/kagyu-lineage/the-golden-rosary/the-7th-karmapa-tashi-paljor/) established an annual prayer festival in order to restore the Vinaya discipline that had grown lax among the sangha, to make offerings to the buddhas, and to inspire sincere faith among those who saw or  heard it, through the grandeur of the Buddhist teachings, and the individuals present.
 
 Held during the first lunar month, great gatherings of over ten thousand members of the sangha assembled at the Monlam. Under the guidance of the Karmapa, they performed the liturgy of the Twenty-Branch...
@@ -85,11 +83,9 @@ How does this seem?  If you have a feel for this, you are in pretty good shape! 
 Now let's take a look at the more special items in the `source/` directory.
 
 ### `navigation.yaml`
-
 This file configures the navigation bar that is present throughout the website.
 
 ### `_assets/` Directory
-
 To adjust the styling of the website or something structural in the HTML, you'll need to work inside the `_assets/` directory.  Let's take a look inside:
 
 Inside `_assets/` we have a few subfolders:
@@ -103,5 +99,4 @@ See our [Technologies Used](https://github.com/karmapa/kagyumonlam.org/wiki/Tech
 See the comments inside these files for more specific info.  As always feel free to reach out to us at [kagyu-monlam-web@googlegroups.com](mailto:kagyu-monlam-web@googlegroups.com) with any questions.
 
 ## More
-
 For more information, see our [wiki](https://github.com/karmapa/kagyumonlam.org/wiki/).
