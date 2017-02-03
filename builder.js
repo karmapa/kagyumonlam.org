@@ -1,3 +1,14 @@
+/**
+ *  @file       builder.js
+ *
+ *  @desc       Entry point into the static website builder.
+ *
+ *  @author     Colin Sullivan <colin [at] colin-sullivan.net>
+ *
+ *  @copyright  2017 the kagyumonlam.org project contributors.
+ *  @license    Licensed under the MIT license.
+ **/
+
 "use strict";
 
 var Metalsmith = require("metalsmith");
@@ -11,7 +22,6 @@ var less = require("metalsmith-less");
 var fingerprint = require("metalsmith-fingerprint");
 var ignore = require("metalsmith-ignore");
 
-
 var add_path = require("./lib/add_path.js");
 var add_current_nav = require("./lib/add_current_nav.js");
 var add_environment_variables = require("./lib/add_environment_variables.js");
@@ -22,7 +32,6 @@ var environmentVars = {
   jsBuildFilePath: 'build.js'
 };
 
-
 var builder = Metalsmith(__dirname)
   .ignore(["*.js", "*.swp"])
   .use(metadata({
@@ -32,7 +41,6 @@ var builder = Metalsmith(__dirname)
   .use(add_environment_variables(environmentVars))
   .use(add_path)
   .use(add_current_nav);
-
 
 let lessOptions = {
   pattern: "styles/index.less",
