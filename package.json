@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -Rf build/*",
     "build": "npm run clean && node builder.js",
-    "watch": "NODE_ENV=development node builder.js",
+    "develop": "NODE_ENV=development node builder.js",
+    "watch": "npm run develop",
     "deploy": "firebase --project kagyumonlamdev deploy"
   },
   "browserify": {},
