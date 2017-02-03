@@ -2,12 +2,12 @@
   "name": "kagyumonlam.org",
   "version": "0.0.1",
   "description": "Rewrite of the Kagyu Monlam website.",
-  "main": "index.js",
+  "main": "builder.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -Rf build/*",
-    "build": "npm run clean && node index.js",
-    "watch": "NODE_ENV=development node index.js",
+    "build": "npm run clean && node builder.js",
+    "watch": "NODE_ENV=development node builder.js",
     "deploy": "firebase --project kagyumonlamdev deploy"
   },
   "browserify": {},
