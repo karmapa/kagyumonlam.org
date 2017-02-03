@@ -85,7 +85,7 @@ Now let's take a look at the more special items in the `source/` directory.
 ### `navigation.yaml`
 This file configures the navigation bar that is present throughout the website.
 
-### `_assets/` Directory
+### Directory Structure in `_assets/`
 To adjust the styling of the website or something structural in the HTML, you'll need to work inside the `_assets/` directory.  Let's take a look inside:
 
 Inside `_assets/` we have a few subfolders:
